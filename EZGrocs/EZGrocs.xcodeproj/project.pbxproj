@@ -33,6 +33,20 @@
 			remoteGlobalIDString = F010237917C304450046087B;
 			remoteInfo = EZGrocs;
 		};
+		F0ACD50917CAE93300DAE1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F0ACD4D917CAE7C300DAE1C2;
+			remoteInfo = ShoppingLib;
+		};
+		F0ACD50B17CAE93300DAE1C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F0ACD4EA17CAE7C400DAE1C2;
+			remoteInfo = ShoppingLibTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +72,7 @@
 		F01023AB17C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F01023AD17C304450046087B /* EZGrocsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZGrocsTests.h; sourceTree = "<group>"; };
 		F01023AE17C304450046087B /* EZGrocsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZGrocsTests.m; sourceTree = "<group>"; };
+		F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShoppingLib.xcodeproj; path = ../../../Frameworks/ShoppingLib/ShoppingLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +106,7 @@
 				F01023A717C304450046087B /* EZGrocsTests */,
 				F010237C17C304450046087B /* Frameworks */,
 				F010237B17C304450046087B /* Products */,
+				F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +176,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F0ACD50517CAE93300DAE1C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0ACD50A17CAE93300DAE1C2 /* libShoppingLib.a */,
+				F0ACD50C17CAE93300DAE1C2 /* ShoppingLibTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +244,12 @@
 			mainGroup = F010237117C304440046087B;
 			productRefGroup = F010237B17C304450046087B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F0ACD50517CAE93300DAE1C2 /* Products */;
+					ProjectRef = F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F010237917C304450046087B /* EZGrocs */,
@@ -226,6 +257,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F0ACD50A17CAE93300DAE1C2 /* libShoppingLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libShoppingLib.a;
+			remoteRef = F0ACD50917CAE93300DAE1C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F0ACD50C17CAE93300DAE1C2 /* ShoppingLibTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ShoppingLibTests.octest;
+			remoteRef = F0ACD50B17CAE93300DAE1C2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F010237817C304450046087B /* Resources */ = {
@@ -456,6 +504,7 @@
 				F01023B417C304450046087B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F01023B517C304450046087B /* Build configuration list for PBXNativeTarget "EZGrocsTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +513,7 @@
 				F01023B717C304450046087B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
