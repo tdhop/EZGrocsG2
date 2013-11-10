@@ -1,0 +1,20 @@
+#xcode specific
+build/*
+*.pbxuser
+*.mode2v3
+*.mode1v3
+*.perspective
+*.perspectivev3
+*~.nib
+
+#ignore private workspace stuff added by Xcode4
+xcuserdata
+# the following is our historical .gitignore line.  Do we want to change this to *.xcworkspace?  Or do we want to just ignore *.xcuserstate?
+project.xcworkspace
+
+## generic files to ignore.
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
