@@ -11,6 +11,7 @@ build/*
 xcuserdata
 # the following is our historical .gitignore line.  Do we want to change this to *.xcworkspace?  Or do we want to just ignore *.xcuserstate?
 project.xcworkspace
+ezgconverter/ezgconverter.xcodeproj/project.xcworkspace/xcuserdata/*
 
 ## generic files to ignore.
 *~

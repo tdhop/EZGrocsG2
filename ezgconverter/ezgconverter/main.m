@@ -138,7 +138,7 @@ int main(int argc, const char * argv[])
         [itemParserDelegate setManagedObjectContext: NSMngContext];
         [itemParser parse];
         
-                        // Save the managed object context
+                        // Save managed object context
         NSError *error = nil;
         if (![NSMngContext save:&error])
         {
