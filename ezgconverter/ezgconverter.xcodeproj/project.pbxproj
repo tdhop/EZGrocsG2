@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565F214417F8D12100491F2E /* ezgconverter in CopyFiles */ = {isa = PBXBuildFile; fileRef = F010235B17C300B40046087B /* ezgconverter */; };
+		56E30BE017FBA51200C5B1B3 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BDF17FBA51200C5B1B3 /* CHCSVParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		56E30BE217FBB08D00C5B1B3 /* CHCSV.h in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE117FBB08D00C5B1B3 /* CHCSV.h */; };
+		56E30BE417FBB0A600C5B1B3 /* CHCSVParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE317FBB0A600C5B1B3 /* CHCSVParser.h */; };
+		56E30BE918207D7C00C5B1B3 /* ItemParseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE818207D7C00C5B1B3 /* ItemParseDelegate.m */; };
+		56E30C0D18288C9200C5B1B3 /* SectionParseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30C0C18288C9200C5B1B3 /* SectionParseDelegate.m */; };
+		56E30C13182DBE4F00C5B1B3 /* SectionNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30C12182DBE4F00C5B1B3 /* SectionNames.m */; };
+		56E30C19182DC23600C5B1B3 /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30C18182DC23600C5B1B3 /* ProductItem.m */; };
 		F010235F17C300B40046087B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010235E17C300B40046087B /* CoreData.framework */; };
 		F010236117C300B40046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010236017C300B40046087B /* Foundation.framework */; };
 		F010236417C300B40046087B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F010236317C300B40046087B /* main.m */; };
@@ -17,17 +25,29 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		F010235917C300B40046087B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = /Users/markastewart;
 			dstSubfolderSpec = 0;
 			files = (
+				565F214417F8D12100491F2E /* ezgconverter in CopyFiles */,
 				F010236B17C300B40046087B /* ezgconverter.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		56E30BDF17FBA51200C5B1B3 /* CHCSVParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = ezgconverter/CHCSVParser.m; sourceTree = "<group>"; };
+		56E30BE117FBB08D00C5B1B3 /* CHCSV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CHCSV.h; path = ezgconverter/CHCSV.h; sourceTree = "<group>"; };
+		56E30BE317FBB0A600C5B1B3 /* CHCSVParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CHCSVParser.h; path = ezgconverter/CHCSVParser.h; sourceTree = "<group>"; };
+		56E30BE718207D7C00C5B1B3 /* ItemParseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemParseDelegate.h; sourceTree = "<group>"; };
+		56E30BE818207D7C00C5B1B3 /* ItemParseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemParseDelegate.m; sourceTree = "<group>"; };
+		56E30C0B18288C9200C5B1B3 /* SectionParseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionParseDelegate.h; sourceTree = "<group>"; };
+		56E30C0C18288C9200C5B1B3 /* SectionParseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionParseDelegate.m; sourceTree = "<group>"; };
+		56E30C11182DBE4E00C5B1B3 /* SectionNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionNames.h; sourceTree = "<group>"; };
+		56E30C12182DBE4F00C5B1B3 /* SectionNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionNames.m; sourceTree = "<group>"; };
+		56E30C17182DC23600C5B1B3 /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
+		56E30C18182DC23600C5B1B3 /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
 		F010235B17C300B40046087B /* ezgconverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ezgconverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F010235E17C300B40046087B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F010236017C300B40046087B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +73,9 @@
 		F010235217C300B40046087B = {
 			isa = PBXGroup;
 			children = (
+				56E30BE317FBB0A600C5B1B3 /* CHCSVParser.h */,
+				56E30BE117FBB08D00C5B1B3 /* CHCSV.h */,
+				56E30BDF17FBA51200C5B1B3 /* CHCSVParser.m */,
 				F010236217C300B40046087B /* ezgconverter */,
 				F010235D17C300B40046087B /* Frameworks */,
 				F010235C17C300B40046087B /* Products */,
@@ -79,10 +102,18 @@
 		F010236217C300B40046087B /* ezgconverter */ = {
 			isa = PBXGroup;
 			children = (
+				56E30C0B18288C9200C5B1B3 /* SectionParseDelegate.h */,
+				56E30C0C18288C9200C5B1B3 /* SectionParseDelegate.m */,
 				F010236317C300B40046087B /* main.m */,
 				F010236A17C300B40046087B /* ezgconverter.1 */,
+				56E30C17182DC23600C5B1B3 /* ProductItem.h */,
+				56E30C18182DC23600C5B1B3 /* ProductItem.m */,
 				F010236717C300B40046087B /* ezgconverter.xcdatamodeld */,
+				56E30C11182DBE4E00C5B1B3 /* SectionNames.h */,
+				56E30C12182DBE4F00C5B1B3 /* SectionNames.m */,
 				F010236517C300B40046087B /* Supporting Files */,
+				56E30BE718207D7C00C5B1B3 /* ItemParseDelegate.h */,
+				56E30BE818207D7C00C5B1B3 /* ItemParseDelegate.m */,
 			);
 			path = ezgconverter;
 			sourceTree = "<group>";
@@ -146,8 +177,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E30BE417FBB0A600C5B1B3 /* CHCSVParser.h in Sources */,
+				56E30BE217FBB08D00C5B1B3 /* CHCSV.h in Sources */,
+				56E30BE017FBA51200C5B1B3 /* CHCSVParser.m in Sources */,
 				F010236417C300B40046087B /* main.m in Sources */,
 				F010236917C300B40046087B /* ezgconverter.xcdatamodeld in Sources */,
+				56E30BE918207D7C00C5B1B3 /* ItemParseDelegate.m in Sources */,
+				56E30C0D18288C9200C5B1B3 /* SectionParseDelegate.m in Sources */,
+				56E30C13182DBE4F00C5B1B3 /* SectionNames.m in Sources */,
+				56E30C19182DC23600C5B1B3 /* ProductItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +288,7 @@
 				F010237017C300B40046087B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
