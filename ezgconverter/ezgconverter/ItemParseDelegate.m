@@ -33,7 +33,7 @@
     self.mngObjectContext = mngObjContext;
 }
 
-                    // Implement the protocol -- note that if don't implement all of it I get crashes!
+                    // Implement the protocol -- note that if don't implement all of it get crashes!
 - (void) parser:(CHCSVParser *)aParser didStartDocument:(NSString *)csvFile
 {
     printf("didStartDocument\n");
@@ -60,7 +60,7 @@
 - (void) parser: (CHCSVParser *)aParser didReadField: aStringField
 {
     char *argpassed = [aStringField cStringUsingEncoding:NSASCIIStringEncoding];
-    // printf("The parser found a field %s\n", argpassed);
+    // printf("The parser found a field %s\n",argpassed);
     
     if (self.shouldStoreLine)
     {
