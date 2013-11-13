@@ -41,7 +41,7 @@
 
 - (void) parser:(CHCSVParser *)aParser didStartDocument:(NSString *)csvFile
 {
-    printf("didStartDocument: Grocery Aisle, no further action\n");
+    printf("didStartDocument: Grocery Aisle\n");
 }
 
 - (void) parser:(CHCSVParser *)aParser didStartLine:(NSUInteger)lineNumber
