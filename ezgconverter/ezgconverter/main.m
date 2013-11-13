@@ -10,8 +10,7 @@
 #import "SectionParseDelegate.h"
 #import "SectionNames.h"
 
-CHCSVParser *sectionParser;
-CHCSVParser *itemParser;
+CHCSVParser *parser;
 SectionParseDelegate *sectionParserDelegate;
 ItemParseDelegate *itemParserDelegate;
 
@@ -109,20 +108,18 @@ int main(int argc, const char * argv[])
             printf ("Result will be placed in pwd\n");
             exit(0);
         }
-                        /* Get Section CSV file name, initialize parser and delegate objects, set delegate 
-                           for parser, pass Managed Object Context and call parser to build section (aisle)
-                           DB records.
+                        /* Get Section CSV file name, allocate and initialize parser and delegate objects, set delegate for parser, pass Managed Object Context and call parser to build section (aisle) DB records.
                         */
         NSError *parsingError;
         NSString *groceryCSVFile = [[argVector[1] lastPathComponent] stringByDeletingPathExtension];
         NSURL *groceryAisleURL=[[NSBundle mainBundle] URLForResource:groceryCSVFile withExtension:@"csv"];
         printf ("URL=%s\n", [[groceryAisleURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
-        sectionParser = [[CHCSVParser  alloc] init];
-        sectionParser = [sectionParser initWithContentsOfCSVFile:[groceryAisleURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
+        parser = [[CHCSVParser  alloc] init];
+        parser = [parser initWithContentsOfCSVFile:[groceryAisleURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
         sectionParserDelegate = [[SectionParseDelegate alloc] init];
-        sectionParser.parserDelegate = (id) sectionParserDelegate;
+        parser.parserDelegate = (id) sectionParserDelegate;
         [sectionParserDelegate setManagedObjectContext: NSMngContext];
-        [sectionParser parse];
+        [parser parse];
         
                         /* Get Grocery Item CSV file name and get URL in app bundle, initialize parser and 
                            delegate objects, set delegate for parser, pass Managed Object Context to 
@@ -130,13 +127,12 @@ int main(int argc, const char * argv[])
                         */
         NSString *theFileName = [[argVector[2] lastPathComponent] stringByDeletingPathExtension];
         NSURL *itemDataURL = [[NSBundle mainBundle] URLForResource:theFileName withExtension:@"csv"];
-        // DEBUG printf ("URL=%s\n", [[itemDataURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
-        itemParser = [[CHCSVParser alloc] init];
-        itemParser = [itemParser initWithContentsOfCSVFile:[itemDataURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
+        printf ("URL=%s\n", [[itemDataURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
+        parser = [parser initWithContentsOfCSVFile:[itemDataURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
         itemParserDelegate = [[ItemParseDelegate  alloc] init];
-        itemParser.parserDelegate = itemParserDelegate;
+        parser.parserDelegate = itemParserDelegate;
         [itemParserDelegate setManagedObjectContext: NSMngContext];
-        [itemParser parse];
+        [parser parse];
         
                         // Save managed object context
         NSError *error = nil;
