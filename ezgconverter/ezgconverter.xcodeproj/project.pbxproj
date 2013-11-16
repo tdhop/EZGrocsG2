@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		565F214417F8D12100491F2E /* ezgconverter in CopyFiles */ = {isa = PBXBuildFile; fileRef = F010235B17C300B40046087B /* ezgconverter */; };
 		56E30BE017FBA51200C5B1B3 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BDF17FBA51200C5B1B3 /* CHCSVParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		56E30BE217FBB08D00C5B1B3 /* CHCSV.h in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE117FBB08D00C5B1B3 /* CHCSV.h */; };
 		56E30BE417FBB0A600C5B1B3 /* CHCSVParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE317FBB0A600C5B1B3 /* CHCSVParser.h */; };
@@ -19,22 +18,7 @@
 		F010236117C300B40046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010236017C300B40046087B /* Foundation.framework */; };
 		F010236417C300B40046087B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F010236317C300B40046087B /* main.m */; };
 		F010236917C300B40046087B /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F010236717C300B40046087B /* ezgconverter.xcdatamodeld */; };
-		F010236B17C300B40046087B /* ezgconverter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = F010236A17C300B40046087B /* ezgconverter.1 */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F010235917C300B40046087B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = /Users/markastewart;
-			dstSubfolderSpec = 0;
-			files = (
-				565F214417F8D12100491F2E /* ezgconverter in CopyFiles */,
-				F010236B17C300B40046087B /* ezgconverter.1 in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		56E30BDF17FBA51200C5B1B3 /* CHCSVParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CHCSVParser.m; path = ezgconverter/CHCSVParser.m; sourceTree = "<group>"; };
@@ -135,7 +119,7 @@
 			buildPhases = (
 				F010235717C300B40046087B /* Sources */,
 				F010235817C300B40046087B /* Frameworks */,
-				F010235917C300B40046087B /* CopyFiles */,
+				56E30C1E1835BA2000C5B1B3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -171,6 +155,22 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56E30C1E1835BA2000C5B1B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Remove DB file, recreate DB file, and copy to Resources dir.\nCOPYSCRIPT=\"${BUILT_PRODUCTS_DIR}/copyscript.out\"\nrm ${BUILT_PRODUCTS_DIR}/ezgconverter.sqlite ${BUILT_PRODUCTS_DIR}>${COPYSCRIPT}\n${BUILT_PRODUCTS_DIR}/ezgconverter ${BUILT_PRODUCTS_DIR}/\"Grocery Aisles.csv\" ${BUILT_PRODUCTS_DIR}/\"Item Data.csv\" >> ${COPYSCRIPT}\ncp ${BUILT_PRODUCTS_DIR}/ezgconverter.sqlite ${SRCROOT}/../EZGrocs/ProductRegistrySource >> ${COPYSCRIPT}\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F010235717C300B40046087B /* Sources */ = {

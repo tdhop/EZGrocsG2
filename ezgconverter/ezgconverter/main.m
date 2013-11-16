@@ -111,23 +111,20 @@ int main(int argc, const char * argv[])
                         /* Get Section CSV file name, allocate and initialize parser and delegate objects, set delegate for parser, pass Managed Object Context and call parser to build section (aisle) DB records.
                         */
         NSError *parsingError;
-        NSString *groceryCSVFile = [[argVector[1] lastPathComponent] stringByDeletingPathExtension];
-        NSURL *groceryAisleURL=[[NSBundle mainBundle] URLForResource:groceryCSVFile withExtension:@"csv"];
-        printf ("URL=%s\n", [[groceryAisleURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
+        NSURL *sectionURL=[NSURL fileURLWithPath:argVector [1]];
+        // printf ("URL=%s\n", [[sectionURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
         parser = [[CHCSVParser  alloc] init];
-        parser = [parser initWithContentsOfCSVFile:[groceryAisleURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
+        parser = [parser initWithContentsOfCSVFile:[sectionURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
         sectionParserDelegate = [[SectionParseDelegate alloc] init];
         parser.parserDelegate = (id) sectionParserDelegate;
         [sectionParserDelegate setManagedObjectContext: NSMngContext];
         [parser parse];
-        
                         /* Get Grocery Item CSV file name and get URL in app bundle, initialize parser and 
                            delegate objects, set delegate for parser, pass Managed Object Context to 
                            delegate and call parser to build section(aisle) DB records.
                         */
-        NSString *theFileName = [[argVector[2] lastPathComponent] stringByDeletingPathExtension];
-        NSURL *itemDataURL = [[NSBundle mainBundle] URLForResource:theFileName withExtension:@"csv"];
-        printf ("URL=%s\n", [[itemDataURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
+        NSURL *itemDataURL=[NSURL fileURLWithPath:argVector [2]];
+        // printf ("URL=%s\n", [[itemDataURL absoluteString] cStringUsingEncoding:NSASCIIStringEncoding]);
         parser = [parser initWithContentsOfCSVFile:[itemDataURL path] encoding:NSMacOSRomanStringEncoding error:&parsingError];
         itemParserDelegate = [[ItemParseDelegate  alloc] init];
         parser.parserDelegate = itemParserDelegate;
