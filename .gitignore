@@ -8,8 +8,8 @@ build/*
 *~.nib
 
 #ignore private workspace stuff added by Xcode4
-xcuserdata
-*.xcworkspace
+*.xcuserdata
+*.xcuserstate
 
 ## generic files to ignore.
 *~
