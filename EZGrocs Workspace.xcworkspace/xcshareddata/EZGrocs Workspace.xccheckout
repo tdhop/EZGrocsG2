@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2833E676-A99D-4242-8827-52CC32D8DCEF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EZGrocs Workspace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>50CB2E37-256D-4D21-8F1D-F123604D8593</key>
+		<string>https://github.com/tdhop/EZGrocsG2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EZGrocs Workspace.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>50CB2E37-256D-4D21-8F1D-F123604D8593</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tdhop/EZGrocsG2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>50CB2E37-256D-4D21-8F1D-F123604D8593</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>50CB2E37-256D-4D21-8F1D-F123604D8593</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EZGrocs Gen2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

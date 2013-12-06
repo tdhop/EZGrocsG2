@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLShoppingListVC.h"
 
-@interface EZViewController : UIViewController
+@interface EZViewController : SLShoppingListVC
 
 @end

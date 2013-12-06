@@ -1,100 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:EZGrocs"
-      name = "EZGrocs">
-      <Group
-         location = "group:EZGrocs"
-         name = "EZGrocs">
-         <FileRef
-            location = "group:Default-568h@2x.png">
-         </FileRef>
-         <FileRef
-            location = "group:Default.png">
-         </FileRef>
-         <FileRef
-            location = "group:Default@2x.png">
-         </FileRef>
-         <Group
-            location = "group:en.lproj"
-            name = "en.lproj">
-            <FileRef
-               location = "group:InfoPlist.strings">
-            </FileRef>
-            <FileRef
-               location = "group:MainStoryboard.storyboard">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:EZAppDelegate.h">
-         </FileRef>
-         <FileRef
-            location = "group:EZAppDelegate.m">
-         </FileRef>
-         <FileRef
-            location = "group:EZGrocs-Info.plist">
-         </FileRef>
-         <FileRef
-            location = "group:EZGrocs-Prefix.pch">
-         </FileRef>
-         <FileRef
-            location = "group:EZViewController.h">
-         </FileRef>
-         <FileRef
-            location = "group:EZViewController.m">
-         </FileRef>
-         <FileRef
-            location = "group:main.m">
-         </FileRef>
-      </Group>
-      <FileRef
-         location = "group:EZGrocs.xcodeproj">
-      </FileRef>
-      <Group
-         location = "group:EZGrocsTests"
-         name = "EZGrocsTests">
-         <Group
-            location = "group:en.lproj"
-            name = "en.lproj">
-            <FileRef
-               location = "group:InfoPlist.strings">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:EZGrocsTests-Info.plist">
-         </FileRef>
-         <FileRef
-            location = "group:EZGrocsTests.h">
-         </FileRef>
-         <FileRef
-            location = "group:EZGrocsTests.m">
-         </FileRef>
-      </Group>
-   </Group>
-   <Group
-      location = "group:ezgconverter"
-      name = "ezgconverter">
-      <Group
-         location = "group:ezgconverter"
-         name = "ezgconverter">
-         <FileRef
-            location = "group:ezgconverter-Prefix.pch">
-         </FileRef>
-         <FileRef
-            location = "group:ezgconverter.1">
-         </FileRef>
-         <FileRef
-            location = "group:ezgconverter.xcdatamodeld">
-         </FileRef>
-         <FileRef
-            location = "group:main.m">
-         </FileRef>
-      </Group>
-      <FileRef
-         location = "group:ezgconverter.xcodeproj">
-      </FileRef>
-   </Group>
+   <FileRef
+      location = "group:EZGrocs/EZGrocs.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ezgconverter/ezgconverter.xcodeproj">
+   </FileRef>
    <Group
       location = "group:Documentation"
       name = "Documentation">
