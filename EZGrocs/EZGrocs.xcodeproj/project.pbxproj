@@ -79,10 +79,10 @@
 		F01023AD17C304450046087B /* EZGrocsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZGrocsTests.h; sourceTree = "<group>"; };
 		F01023AE17C304450046087B /* EZGrocsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZGrocsTests.m; sourceTree = "<group>"; };
 		F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShoppingLib.xcodeproj; path = ../../../Frameworks/ShoppingLib/ShoppingLib.xcodeproj; sourceTree = "<group>"; };
-		F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabeledSpinnerView.h; path = EZGrocs/LabeledSpinnerView.h; sourceTree = "<group>"; };
-		F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabeledSpinnerView.m; path = EZGrocs/LabeledSpinnerView.m; sourceTree = "<group>"; };
-		F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SLShoppingListVC.h; path = EZGrocs/SLShoppingListVC.h; sourceTree = "<group>"; };
-		F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SLShoppingListVC.m; path = EZGrocs/SLShoppingListVC.m; sourceTree = "<group>"; };
+		F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledSpinnerView.h; sourceTree = "<group>"; };
+		F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledSpinnerView.m; sourceTree = "<group>"; };
+		F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShoppingListVC.h; sourceTree = "<group>"; };
+		F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLShoppingListVC.m; sourceTree = "<group>"; };
 		F0DABE541851807D0043F2FC /* ezgconverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ezgconverter.xcdatamodel; sourceTree = "<group>"; };
 		F0DABE56185180F60043F2FC /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductItem.h; path = ../../ezgconverter/ezgconverter/ProductItem.h; sourceTree = "<group>"; };
 		F0DABE57185180F60043F2FC /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductItem.m; path = ../../ezgconverter/ezgconverter/ProductItem.m; sourceTree = "<group>"; };
@@ -119,10 +119,6 @@
 		F010237117C304440046087B = {
 			isa = PBXGroup;
 			children = (
-				F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */,
-				F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */,
-				F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */,
-				F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */,
 				F010238317C304450046087B /* EZGrocs */,
 				F01023A717C304450046087B /* EZGrocsTests */,
 				F010237C17C304450046087B /* Frameworks */,
@@ -161,6 +157,7 @@
 				F010239517C304450046087B /* MainStoryboard.storyboard */,
 				F010239817C304450046087B /* EZViewController.h */,
 				F010239917C304450046087B /* EZViewController.m */,
+				F0DABE5F1857E89C0043F2FC /* Shared Code */,
 				F010238417C304450046087B /* Supporting Files */,
 			);
 			path = EZGrocs;
@@ -218,6 +215,17 @@
 				F0DABE531851807D0043F2FC /* ezgconverter.xcdatamodeld */,
 			);
 			name = "Data Files";
+			sourceTree = "<group>";
+		};
+		F0DABE5F1857E89C0043F2FC /* Shared Code */ = {
+			isa = PBXGroup;
+			children = (
+				F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */,
+				F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */,
+				F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */,
+				F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */,
+			);
+			name = "Shared Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
