@@ -1,21 +1,104 @@
 //
 //  EZAppDelegate.m
-//  EZGrocs
 //
-//  Created by Tim Hopmann on 8/19/13.
+//  Created by Tim Hopmann on 9/19/13.
 //  Copyright (c) 2013 EZLifeSoftware.com. All rights reserved.
 //
 
 #import "EZAppDelegate.h"
+#import "SLShoppingListVC.h"
+
+@interface EZAppDelegate()
+
+@property (strong, nonatomic) UIManagedDocument *productRegistryManagedDoc;
+@property (strong, nonatomic) NSManagedObjectContext *productRegistryContext;
+
+@end
 
 @implementation EZAppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+        // The following is a dummy call to force the linker to load this particular class from my library.  Would not happen on its own because this class is only referenced through the class identifier in storyboard.  Linker does not 'see' that.
+    [SLShoppingListVC class];  // Probably no longer necessary given some of the code below
+    
+        // Tell the ShoppingListVC that it should wait for proceed message given that we need to spend some time opening the database
+    SLShoppingListVC *slShoppingListVC = (SLShoppingListVC *)self.window.rootViewController;
+    slShoppingListVC.shouldWaitForProceedMessage = YES;
+    
+    
+        // COPY THE PRODUCT REGISTRY SOURCE TO THE SANDBOX AND OPEN IT.  Using the name Vikings for the database just for fun.  Since this is a test app, it doesn't matter.
+    
+    /*  Get URL of Documents directory. It returns all matching
+     directories in the domain but should only see one and it
+     is in location 0 of the array (or "lastObject")
+     */
+    
+    NSArray *tempURLs = [[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask];
+    NSURL *documentsURL = [tempURLs lastObject];
+    
+        // Change working directory to Documents and create "Vikings/StoreContent" directory in run-time environment.
+    
+    BOOL success = [[NSFileManager defaultManager] changeCurrentDirectoryPath:[documentsURL path]];
+    NSLog(@"Change to Documents directory was successful? %d", success);
+    
+    success = [[NSFileManager defaultManager] createDirectoryAtPath:@"./VikingsDB/StoreContent" withIntermediateDirectories:YES attributes:nil error:nil];
+    NSLog(@"Create new directory was successful? %d", success);
+    
+    /* Copy persistentStore into new directory from bundle. First build URL for file to be copied from bundle then build URL for file destination in Documents then copy file.
+     */
+    NSURL *copyFromURL = [[NSBundle mainBundle] resourceURL];
+    copyFromURL = [copyFromURL URLByAppendingPathComponent:@"ProductRegistrySource"];
+    NSLog(@"dbfile=%@", copyFromURL);
+    NSURL *vikingsDestinationURL = [documentsURL URLByAppendingPathComponent:@"VikingsDB"];
+    NSURL *copyToURL = [vikingsDestinationURL URLByAppendingPathComponent:@"StoreContent/persistentstore"];
+    
+    NSError *copyError; // This is there so it can be examined in debugger, otherwise not used
+    success = [[NSFileManager defaultManager] copyItemAtURL:copyFromURL toURL:copyToURL error:&copyError];
+    NSLog(@"File copy was successful? %d", success);
+    
+        // Allocate UIManagedDoc object pointer to VikingsDB and open file if exists.
+    
+    self.productRegistryManagedDoc = [[UIManagedDocument alloc] initWithFileURL:vikingsDestinationURL];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[vikingsDestinationURL path]])
+    {
+        [self.productRegistryManagedDoc openWithCompletionHandler:^(BOOL success)
+         {
+                 // File should have been copied from main bundle. If not there - PROBLEM!
+             if (!success)
+             {
+                 NSLog(@"Couldn't open file at %@", vikingsDestinationURL);
+             }
+             else
+             {
+                 NSLog(@"file open success=%d", success);
+             }
+            [self registryDidOpen];
+             
+         }];
+    } else NSLog(@"VikingsDB file not found");
+    
     return YES;
 }
-							
+
+- (void) registryDidOpen {
+    
+        // Set VikingsDB context and save in App Delegate for use by all View Controllers.
+    self.productRegistryContext = self.productRegistryManagedDoc.managedObjectContext;
+    
+        // Initialize root view controller (SLShoppingListVC)
+    SLShoppingListVC *productRegistryListVC = (SLShoppingListVC *)self.window.rootViewController;
+    productRegistryListVC.productTableContext = self.productRegistryContext;
+    
+        // Signal to root view controller that it's safe to proceed
+    [productRegistryListVC proceed];
+    
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

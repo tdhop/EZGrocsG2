@@ -168,7 +168,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Remove DB file, recreate DB file, and copy to Resources dir.\nCOPYSCRIPT=\"${BUILT_PRODUCTS_DIR}/copyscript.out\"\nrm -f ${BUILT_PRODUCTS_DIR}/ezgconverter.sqlite >${COPYSCRIPT}\n${BUILT_PRODUCTS_DIR}/ezgconverter ${BUILT_PRODUCTS_DIR}/\"Grocery Aisles.csv\" ${BUILT_PRODUCTS_DIR}/\"Item Data.csv\" >> ${COPYSCRIPT}\necho ${SRCROOT} >> ${COPYSCRIPT}\ncp ${BUILT_PRODUCTS_DIR}/ezgconverter.sqlite \"${SRCROOT}/../EZGrocs/ProductRegistrySource\" >> ${COPYSCRIPT}\n\n\n";
+			shellScript = "# Remove DB file, recreate DB file, and copy to Resources dir.\nCOPYSCRIPT=\"${BUILT_PRODUCTS_DIR}/copyscript.out\"\nrm -f ${BUILT_PRODUCTS_DIR}/ezgconverter.sqlite >${COPYSCRIPT}\n${BUILT_PRODUCTS_DIR}/ezgconverter ${SRCROOT}/..//Resources/\"Grocery Aisles.csv\" ${SRCROOT}/../Resources/\"Item Data.csv\" >> ${COPYSCRIPT}\ncp ${BUILT_PRODUCTS_DIR}/ezgconverter.sqlite ${SRCROOT}/../EZGrocs/ProductRegistrySource >> ${COPYSCRIPT}\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
