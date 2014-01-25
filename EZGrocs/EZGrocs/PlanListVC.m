@@ -32,7 +32,7 @@
     
     EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
     self.productTableContext=myAppDelegate.productRegistryContext;
-    NSLog(@"PlanVC:VDL MOC=%@",self.productTableContext);
+    NSLog(@"PlanVC:VDL Title=%@, MOC=%@",self.title, self.productTableContext);
     
                     /* If no Object Context, app delegate not finished loading, so 
                        wait. If loading finished and were waiting, cancel wait.

@@ -53,6 +53,8 @@
                        default to FALSE.
                     */
     [super viewDidLoad];
+    
+    NSLog(@"MFVC: VDL: title=%@", self.title);
 }
 
 - (void) proceed
