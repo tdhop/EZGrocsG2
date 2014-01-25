@@ -7,11 +7,11 @@
 
 #import "EZAppDelegate.h"
 #import "SLShoppingListVC.h"
+#import "FavoritesVC.h"
 
 @interface EZAppDelegate()
 
 @property (strong, nonatomic) UIManagedDocument *productRegistryManagedDoc;
-@property (strong, nonatomic) NSManagedObjectContext *productRegistryContext;
 
 @end
 
@@ -23,11 +23,11 @@
     // Override point for customization after application launch.
     
         // The following is a dummy call to force the linker to load this particular class from my library.  Would not happen on its own because this class is only referenced through the class identifier in storyboard.  Linker does not 'see' that.
-    [SLShoppingListVC class];  // Probably no longer necessary given some of the code below
+    //MAS [SLShoppingListVC class];  // Probably no longer necessary given some of the code below
     
         // Tell the ShoppingListVC that it should wait for proceed message given that we need to spend some time opening the database
-    SLShoppingListVC *slShoppingListVC = (SLShoppingListVC *)self.window.rootViewController;
-    slShoppingListVC.shouldWaitForProceedMessage = YES;
+    // mas SLShoppingListVC *slShoppingListVC = (SLShoppingListVC *)self.window.rootViewController;
+    // mas slShoppingListVC.shouldWaitForProceedMessage = YES;
     
     
         // COPY THE PRODUCT REGISTRY SOURCE TO THE SANDBOX AND OPEN IT.  Using the name Vikings for the database just for fun.  Since this is a test app, it doesn't matter.
@@ -85,18 +85,23 @@
     return YES;
 }
 
-- (void) registryDidOpen {
-    
-        // Set VikingsDB context and save in App Delegate for use by all View Controllers.
+- (void) registryDidOpen
+{
+                    /* Set VikingsDB context and save in App Delegate for use by
+                       all View Controllers.
+                    */
     self.productRegistryContext = self.productRegistryManagedDoc.managedObjectContext;
     
-        // Initialize root view controller (SLShoppingListVC)
-    SLShoppingListVC *productRegistryListVC = (SLShoppingListVC *)self.window.rootViewController;
-    productRegistryListVC.productTableContext = self.productRegistryContext;
+                    /* Use pointer to initial tab bar view controller to get to
+                       first tab (should be a SLShoppingListVC) and call proceed
+                       method since VC is waiting for the notification.
+                    */
     
-        // Signal to root view controller that it's safe to proceed
-    [productRegistryListVC proceed];
-    
+    UITabBarController *tabController = self.window.rootViewController;
+    UINavigationController *navController = [[tabController viewControllers] objectAtIndex:0];
+    SLShoppingListVC *slSListVC=navController.topViewController;
+    NSLog(@"AppDelegate: Calling proceed");
+    [slSListVC proceed];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

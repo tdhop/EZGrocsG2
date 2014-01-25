@@ -14,11 +14,17 @@
 
 @implementation EZViewController
 
-/* - (void)viewDidLoad
+- (void)viewDidLoad
 {
-   [super viewDidLoad];
+    [super viewDidLoad];
+    
 	// Do any additional setup after loading the view, typically from a nib.
-} */
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 
 - (void)didReceiveMemoryWarning
 {

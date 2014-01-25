@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		568CB388188B8021006B91F1 /* PlanListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB387188B8021006B91F1 /* PlanListVC.m */; };
+		569833CF188B18CF004BAA5D /* FavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 569833CE188B18CF004BAA5D /* FavoritesVC.m */; };
 		F010237E17C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
 		F010238017C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
 		F010238217C304450046087B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010238117C304450046087B /* CoreGraphics.framework */; };
@@ -56,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		568CB386188B8021006B91F1 /* PlanListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListVC.h; sourceTree = "<group>"; };
+		568CB387188B8021006B91F1 /* PlanListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListVC.m; sourceTree = "<group>"; };
+		569833CD188B18CF004BAA5D /* FavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesVC.h; sourceTree = "<group>"; };
+		569833CE188B18CF004BAA5D /* FavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesVC.m; sourceTree = "<group>"; };
 		F010237A17C304450046087B /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F010237D17C304450046087B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F010237F17C304450046087B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -224,6 +230,10 @@
 				F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */,
 				F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */,
 				F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */,
+				569833CD188B18CF004BAA5D /* FavoritesVC.h */,
+				569833CE188B18CF004BAA5D /* FavoritesVC.m */,
+				568CB386188B8021006B91F1 /* PlanListVC.h */,
+				568CB387188B8021006B91F1 /* PlanListVC.m */,
 			);
 			name = "Shared Code";
 			sourceTree = "<group>";
@@ -367,9 +377,11 @@
 				F0DABE5B185180F60043F2FC /* SectionNames.m in Sources */,
 				F010238E17C304450046087B /* EZAppDelegate.m in Sources */,
 				F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */,
+				568CB388188B8021006B91F1 /* PlanListVC.m in Sources */,
 				F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */,
 				F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */,
 				F010239A17C304450046087B /* EZViewController.m in Sources */,
+				569833CF188B18CF004BAA5D /* FavoritesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

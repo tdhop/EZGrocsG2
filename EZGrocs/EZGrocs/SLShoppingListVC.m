@@ -60,7 +60,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
         // Determine if it's time to load the table or if I should wait until I get a signal
         // For now, just turn on a spinner
@@ -122,8 +122,8 @@
     [self.shoppingListTable flashScrollIndicators];
 }
 
-- (void) proceed {
-    
+- (void) proceed
+{
         // We're ready to go, take down the spinner view
     
         // Let other code know that this routine has run (note that this has to be up front so that if viewWillAppear jumps in before proceed removes the spinner then either viewWillAppear will never add it (because flag is set) or viewWillAppear will add it and proceed will immediately remove it.
@@ -173,7 +173,7 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-        //NSLog(@"Sections %@", [self.shoppingListResultsController sections]);
+    // NSLog(@"Sections %@", [self.shoppingListResultsController sections]);
     NSInteger count;
     count = [[self.shoppingListResultsController sections] count];
     
@@ -198,7 +198,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
-    // cell.textLabel.text = @"I love Mary!";
     ProductItem *product = [self.shoppingListResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = product.itemName;
     
@@ -211,8 +210,7 @@
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
-}
-*/
+} */
 
 /*
 // Override to support editing the table view.
@@ -225,8 +223,7 @@
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
-}
-*/
+} */
 
 /*
 // Override to support rearranging the table view.
@@ -243,6 +240,7 @@
     return YES;
 }
 */
+
 
 #pragma mark - Table view delegate
 
