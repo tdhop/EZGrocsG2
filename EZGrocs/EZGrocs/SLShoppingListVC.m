@@ -176,7 +176,7 @@
     // NSLog(@"Sections %@", [self.shoppingListResultsController sections]);
     NSInteger count;
     count = [[self.shoppingListResultsController sections] count];
-    
+    NSLog(@"SLVC #sections = %d",count);
     return count; // count;
 }
 
@@ -184,11 +184,19 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    if ([[self.shoppingListResultsController sections] count] > 0) {
+    if ([[self.shoppingListResultsController sections] count] > 0)
+    {
         id <NSFetchedResultsSectionInfo> sectionInfo = [[self.shoppingListResultsController sections] objectAtIndex:section];
+        NSLog(@"SLVC: # in section=%d",[sectionInfo numberOfObjects]);
         return [sectionInfo numberOfObjects];
     } else
         return 0;
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *sectTitle = @"Foobar";
+    return sectTitle;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -212,7 +220,6 @@
     return YES;
 } */
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -223,7 +230,7 @@
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
-} */
+}
 
 /*
 // Override to support rearranging the table view.
