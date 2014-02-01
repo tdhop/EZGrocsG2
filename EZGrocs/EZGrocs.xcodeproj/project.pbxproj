@@ -19,7 +19,6 @@
 		F010239217C304450046087B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F010239117C304450046087B /* Default@2x.png */; };
 		F010239417C304450046087B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F010239317C304450046087B /* Default-568h@2x.png */; };
 		F010239717C304450046087B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F010239517C304450046087B /* MainStoryboard.storyboard */; };
-		F010239A17C304450046087B /* EZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F010239917C304450046087B /* EZViewController.m */; };
 		F01023A217C304450046087B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01023A117C304450046087B /* SenTestingKit.framework */; };
 		F01023A317C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
 		F01023A417C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
@@ -76,8 +75,6 @@
 		F010239117C304450046087B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F010239317C304450046087B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F010239617C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F010239817C304450046087B /* EZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZViewController.h; sourceTree = "<group>"; };
-		F010239917C304450046087B /* EZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZViewController.m; sourceTree = "<group>"; };
 		F01023A017C304450046087B /* EZGrocsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZGrocsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01023A117C304450046087B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F01023A917C304450046087B /* EZGrocsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZGrocsTests-Info.plist"; sourceTree = "<group>"; };
@@ -157,12 +154,14 @@
 		F010238317C304450046087B /* EZGrocs */ = {
 			isa = PBXGroup;
 			children = (
-				F0DABE5C185181290043F2FC /* Data Files */,
 				F010238C17C304450046087B /* EZAppDelegate.h */,
 				F010238D17C304450046087B /* EZAppDelegate.m */,
 				F010239517C304450046087B /* MainStoryboard.storyboard */,
-				F010239817C304450046087B /* EZViewController.h */,
-				F010239917C304450046087B /* EZViewController.m */,
+				569833CD188B18CF004BAA5D /* FavoritesVC.h */,
+				569833CE188B18CF004BAA5D /* FavoritesVC.m */,
+				568CB386188B8021006B91F1 /* PlanListVC.h */,
+				568CB387188B8021006B91F1 /* PlanListVC.m */,
+				F0DABE5C185181290043F2FC /* Data Files */,
 				F0DABE5F1857E89C0043F2FC /* Shared Code */,
 				F010238417C304450046087B /* Supporting Files */,
 			);
@@ -230,10 +229,6 @@
 				F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */,
 				F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */,
 				F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */,
-				569833CD188B18CF004BAA5D /* FavoritesVC.h */,
-				569833CE188B18CF004BAA5D /* FavoritesVC.m */,
-				568CB386188B8021006B91F1 /* PlanListVC.h */,
-				568CB387188B8021006B91F1 /* PlanListVC.m */,
 			);
 			name = "Shared Code";
 			sourceTree = "<group>";
@@ -380,7 +375,6 @@
 				568CB388188B8021006B91F1 /* PlanListVC.m in Sources */,
 				F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */,
 				F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */,
-				F010239A17C304450046087B /* EZViewController.m in Sources */,
 				569833CF188B18CF004BAA5D /* FavoritesVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
