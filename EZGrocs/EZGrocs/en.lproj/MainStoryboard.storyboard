@@ -18,40 +18,24 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0U5-40-7HF" kind="relationship" relationship="viewControllers" id="yJj-rQ-S3H"/>
-                        <segue destination="DMC-LZ-K7d" kind="relationship" relationship="viewControllers" id="pIC-CO-a9v"/>
+                        <segue destination="HAS-g1-osW" kind="relationship" relationship="viewControllers" id="mpw-CN-vBz"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="pzy-0J-pSp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzA-Sq-aWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271" y="61"/>
+            <point key="canvasLocation" x="-193" y="78"/>
         </scene>
-        <!--Navigation Controller - Manage Favorites-->
-        <scene sceneID="3Gb-DJ-kCa">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="DMC-LZ-K7d" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Manage Favorites" id="Nrh-eJ-Ghn"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X5y-Iu-8NH">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="uor-sI-SCr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGP-0U-wC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="191" y="761"/>
-        </scene>
-        <!--Plan ListVC - ManageFavorites-->
+        <!--Favorites ListVC - ManageFavorites-->
         <scene sceneID="5">
             <objects>
-                <viewController title="ManageFavorites" id="2" customClass="PlanListVC" sceneMemberID="viewController">
+                <viewController title="ManageFavorites" id="2" customClass="FavoritesListVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="uxg-w4-A5E">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="397"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -85,16 +69,38 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woA-To-PKj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Manage Favorites" id="ZSQ-L5-Maf">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="G65-tL-g1F"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="5IB-o0-kH9"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qBW-Le-22w">
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uxg-w4-A5E" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="BzS-ZQ-iq6"/>
+                            <constraint firstItem="qBW-Le-22w" firstAttribute="trailing" secondItem="uxg-w4-A5E" secondAttribute="trailing" type="default" id="0vz-S9-c7R"/>
+                            <constraint firstAttribute="trailing" secondItem="woA-To-PKj" secondAttribute="trailing" type="default" id="6mw-KI-RUB"/>
+                            <constraint firstItem="uxg-w4-A5E" firstAttribute="top" secondItem="qBW-Le-22w" secondAttribute="bottom" type="default" id="AvK-OP-pDa"/>
+                            <constraint firstItem="qBW-Le-22w" firstAttribute="leading" secondItem="uxg-w4-A5E" secondAttribute="leading" type="default" id="Fv4-Cf-4uz"/>
+                            <constraint firstItem="woA-To-PKj" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="G2h-W7-DyF"/>
+                            <constraint firstItem="woA-To-PKj" firstAttribute="centerX" secondItem="jHt-oy-GrT" secondAttribute="centerX" type="user" id="H8W-xK-57n"/>
+                            <constraint firstItem="qBW-Le-22w" firstAttribute="leading" secondItem="woA-To-PKj" secondAttribute="leading" type="default" id="JAU-ML-KYx"/>
+                            <constraint firstItem="qBW-Le-22w" firstAttribute="top" secondItem="woA-To-PKj" secondAttribute="bottom" type="default" id="OTg-WF-iaX"/>
+                            <constraint firstItem="qBW-Le-22w" firstAttribute="trailing" secondItem="woA-To-PKj" secondAttribute="trailing" type="default" id="UcV-5w-TWY"/>
+                            <constraint firstItem="woA-To-PKj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Uvh-c7-qqK"/>
                             <constraint firstItem="jHt-oy-GrT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="V3L-gF-WcF"/>
-                            <constraint firstAttribute="trailing" secondItem="uxg-w4-A5E" secondAttribute="trailing" type="default" id="Zbs-Xe-Yfx"/>
-                            <constraint firstItem="uxg-w4-A5E" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="fzU-fR-J3w"/>
-                            <constraint firstItem="jHt-oy-GrT" firstAttribute="centerX" secondItem="uxg-w4-A5E" secondAttribute="centerX" type="default" id="oKA-op-mk5"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Manage Favorites" id="Jx9-LI-Dmv"/>
                     <navigationItem key="navigationItem" title="Manage Favorites" id="REV-dp-njY"/>
                     <connections>
                         <outlet property="shoppingListTable" destination="uxg-w4-A5E" id="lZ6-Cu-ihY"/>
@@ -102,34 +108,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="761"/>
+            <point key="canvasLocation" x="388" y="703"/>
         </scene>
-        <!--Navigation Controller - Plan List-->
-        <scene sceneID="jyh-bO-bbm">
-            <objects>
-                <navigationController title="Plan List" definesPresentationContext="YES" id="0U5-40-7HF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Plan Your List" id="3oR-3f-Seh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qlS-dk-ph8">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="HAS-g1-osW" kind="relationship" relationship="rootViewController" id="BYy-S1-1eM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vTm-mk-SzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="199" y="61"/>
-        </scene>
-        <!--Plan ListVC - PlanList-->
+        <!--Plan ListVC - Title-->
         <scene sceneID="JFO-SJ-fAM">
             <objects>
-                <viewController title="PlanList" id="HAS-g1-osW" customClass="PlanListVC" sceneMemberID="viewController">
+                <viewController id="HAS-g1-osW" customClass="PlanListVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9QO-W6-p09">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Xn-Ru-UZm">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="397"/>
+                                <rect key="frame" x="0.0" y="88" width="320" height="397"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -163,24 +153,48 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHE-ZK-LmI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Plan Your List" id="L0e-MQ-UIG">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="edit" id="v2H-j8-RPQ"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="geY-cf-vDn"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gAD-gv-iZ5">
+                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Xn-Ru-UZm" firstAttribute="leading" secondItem="9QO-W6-p09" secondAttribute="leading" type="default" id="ADe-bl-Zgs"/>
-                            <constraint firstItem="yPF-J4-uJd" firstAttribute="centerX" secondItem="4Xn-Ru-UZm" secondAttribute="centerX" type="default" id="W6y-fA-u8c"/>
+                            <constraint firstItem="gAD-gv-iZ5" firstAttribute="leading" secondItem="9QO-W6-p09" secondAttribute="leading" type="default" id="B3J-0V-eRX"/>
+                            <constraint firstItem="gAD-gv-iZ5" firstAttribute="trailing" secondItem="4Xn-Ru-UZm" secondAttribute="trailing" type="default" id="BLg-X8-MKO"/>
+                            <constraint firstItem="gAD-gv-iZ5" firstAttribute="leading" secondItem="4Xn-Ru-UZm" secondAttribute="leading" type="default" id="MhD-IU-sT1"/>
+                            <constraint firstAttribute="trailing" secondItem="gAD-gv-iZ5" secondAttribute="trailing" type="default" id="VdP-nk-HWK"/>
+                            <constraint firstItem="gAD-gv-iZ5" firstAttribute="trailing" secondItem="IHE-ZK-LmI" secondAttribute="trailing" type="default" id="WSh-Bg-PdY"/>
+                            <constraint firstItem="gAD-gv-iZ5" firstAttribute="top" secondItem="IHE-ZK-LmI" secondAttribute="bottom" type="default" id="XTj-Vv-0zc"/>
+                            <constraint firstItem="gAD-gv-iZ5" firstAttribute="leading" secondItem="IHE-ZK-LmI" secondAttribute="leading" type="default" id="a69-8x-pRM"/>
+                            <constraint firstItem="IHE-ZK-LmI" firstAttribute="top" secondItem="9QO-W6-p09" secondAttribute="top" type="default" id="cdc-Lt-7FK"/>
                             <constraint firstItem="yPF-J4-uJd" firstAttribute="top" secondItem="9QO-W6-p09" secondAttribute="top" constant="20" symbolic="YES" type="default" id="cfT-z1-XFR"/>
-                            <constraint firstAttribute="trailing" secondItem="4Xn-Ru-UZm" secondAttribute="trailing" type="default" id="imp-uI-JdN"/>
-                            <constraint firstItem="4Xn-Ru-UZm" firstAttribute="top" secondItem="9QO-W6-p09" secondAttribute="top" type="default" id="kMI-DJ-uMf"/>
+                            <constraint firstItem="IHE-ZK-LmI" firstAttribute="centerX" secondItem="yPF-J4-uJd" secondAttribute="centerX" type="default" id="nQI-1l-tr7"/>
+                            <constraint firstItem="4Xn-Ru-UZm" firstAttribute="top" secondItem="gAD-gv-iZ5" secondAttribute="bottom" type="default" id="xCs-lE-nmd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Plan Your List" id="y5b-Vv-ONb"/>
+                    <tabBarItem key="tabBarItem" title="Plan Your List" id="c3m-Kz-qMc"/>
+                    <navigationItem key="navigationItem" title="Title" id="lpZ-E9-tTd"/>
                     <connections>
                         <outlet property="shoppingListTable" destination="4Xn-Ru-UZm" id="ZfH-ap-6Ir"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kw5-6Z-eWC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661" y="-513"/>
+            <point key="canvasLocation" x="388" y="100"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

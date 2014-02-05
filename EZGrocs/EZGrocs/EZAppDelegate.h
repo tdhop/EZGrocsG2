@@ -14,11 +14,4 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *productRegistryContext;
 
-                    /* Macros for entity names of supported lists. Created so
-                       compiler can catch misspellings.
-                    */
-#define ACTIVE_REGISTRY_LIST "activeRegistryList"
-#define ACTIVE_FAVORITES_LIST "activeFavoritesList"
-#define ACTIVE_SHOPPING_LIST "activeShoppingList"
-
 @end

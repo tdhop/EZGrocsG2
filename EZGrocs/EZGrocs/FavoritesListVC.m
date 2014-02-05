@@ -1,19 +1,19 @@
 //
-//  PlanListVC.m
+//  FavoritesListVC.m
 //  
 //
 //  Created by Mark A Stewart on 1/31/14.
 //
 //
 
-#import "PlanListVC.h"
+#import "FavoritesListVC.h"
 #import "EZAppDelegate.h"
 
-@interface PlanListVC ()
+@interface FavoritesListVC ()
 
 @end
 
-@implementation PlanListVC
+@implementation FavoritesListVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +35,7 @@
     EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
     self.productTableContext=myAppDelegate.productRegistryContext;
     
-    NSLog(@"PLVC: proceed: MOC=%@",self.productTableContext);
+    NSLog(@"FavVC: proceed: MOC=%@",self.productTableContext);
     
     [super proceed];
 }
