@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="12F45" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="ProductItem" representedClassName="ProductItem" syncable="YES">
-        <attribute name="itemIdentifier" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sectionIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ConsumerNotes" syncable="YES">
+        <attribute name="maxLength" optional="YES" attributeType="Integer 16" defaultValueString="40" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" defaultValueString="No notes" syncable="YES"/>
+        <relationship name="container" optional="YES" maxCount="1" deletionRule="Deny" destinationEntity="ShoppingItem" inverseName="notes" inverseEntity="ShoppingItem" syncable="YES"/>
     </entity>
-    <entity name="SectionNames" representedClassName="SectionNames" syncable="YES">
-        <attribute name="sectionIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    <entity name="ListPortfolio" syncable="YES">
+        <relationship name="portfolioMembers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShoppingItemList" inverseName="owningPortfolio" inverseEntity="ShoppingItemList" syncable="YES"/>
+    </entity>
+    <entity name="ProductItem" syncable="YES">
+        <attribute name="itemName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="userItemFlag" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <fetchedProperty name="sectionInfo" optional="YES" syncable="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="ProductItem"/>
+        </fetchedProperty>
+    </entity>
+    <entity name="ShoppingItem" parentEntity="ProductItem" syncable="YES">
+        <attribute name="couponFlag" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ConsumerNotes" inverseName="container" inverseEntity="ConsumerNotes" syncable="YES"/>
+        <relationship name="owningList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingItemList" inverseName="listMembers" inverseEntity="ShoppingItemList" syncable="YES"/>
+    </entity>
+    <entity name="ShoppingItemList" syncable="YES">
+        <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="listMembers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShoppingItem" inverseName="owningList" inverseEntity="ShoppingItem" syncable="YES"/>
+        <relationship name="owningPortfolio" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ListPortfolio" inverseName="portfolioMembers" inverseEntity="ListPortfolio" syncable="YES"/>
+    </entity>
+    <entity name="StoreSection" representedClassName="StoreSection" syncable="YES">
+        <attribute name="sectionID" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionSequenceID" optional="YES" attributeType="Integer 16" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ProductItem" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="SectionNames" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ConsumerNotes" positionX="-99" positionY="189" width="128" height="88"/>
+        <element name="ListPortfolio" positionX="-81" positionY="372" width="128" height="58"/>
+        <element name="ProductItem" positionX="162" positionY="9" width="128" height="116"/>
+        <element name="ShoppingItem" positionX="160" positionY="192" width="128" height="103"/>
+        <element name="ShoppingItemList" positionX="169" positionY="342" width="128" height="88"/>
+        <element name="StoreSection" positionX="-72" positionY="42" width="128" height="88"/>
     </elements>
 </model>

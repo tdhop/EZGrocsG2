@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		568CB388188B8021006B91F1 /* PlanListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB387188B8021006B91F1 /* PlanListVC.m */; };
 		569833CF188B18CF004BAA5D /* FavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 569833CE188B18CF004BAA5D /* FavoritesVC.m */; };
-		F00E9FE6189D325800DA0316 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00E9FE5189D325800DA0316 /* XCTest.framework */; };
 		F010237E17C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
 		F010238017C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
 		F010238217C304450046087B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010238117C304450046087B /* CoreGraphics.framework */; };
@@ -62,7 +61,6 @@
 		568CB387188B8021006B91F1 /* PlanListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListVC.m; sourceTree = "<group>"; };
 		569833CD188B18CF004BAA5D /* FavoritesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesVC.h; sourceTree = "<group>"; };
 		569833CE188B18CF004BAA5D /* FavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesVC.m; sourceTree = "<group>"; };
-		F00E9FE5189D325800DA0316 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F010237A17C304450046087B /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F010237D17C304450046087B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F010237F17C304450046087B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F00E9FE6189D325800DA0316 /* XCTest.framework in Frameworks */,
 				F0DABE5E185181760043F2FC /* CoreData.framework in Frameworks */,
 				F010237E17C304450046087B /* UIKit.framework in Frameworks */,
 				F010238017C304450046087B /* Foundation.framework in Frameworks */,
@@ -145,7 +142,6 @@
 		F010237C17C304450046087B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F00E9FE5189D325800DA0316 /* XCTest.framework */,
 				F0DABE5D185181760043F2FC /* CoreData.framework */,
 				F010237D17C304450046087B /* UIKit.framework */,
 				F010237F17C304450046087B /* Foundation.framework */,
