@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 EZLifeSoftware.com. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface EZGrocsTests : SenTestCase
+@interface EZGrocsTests : XCTestCase
 
 @end

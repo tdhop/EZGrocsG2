@@ -19,11 +19,12 @@
 		F010239217C304450046087B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F010239117C304450046087B /* Default@2x.png */; };
 		F010239417C304450046087B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F010239317C304450046087B /* Default-568h@2x.png */; };
 		F010239717C304450046087B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F010239517C304450046087B /* MainStoryboard.storyboard */; };
-		F01023A217C304450046087B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01023A117C304450046087B /* SenTestingKit.framework */; };
 		F01023A317C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
 		F01023A417C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
 		F01023AC17C304450046087B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01023AA17C304450046087B /* InfoPlist.strings */; };
 		F01023AF17C304450046087B /* EZGrocsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01023AE17C304450046087B /* EZGrocsTests.m */; };
+		F051969F18A476B000A0E7A8 /* DataClassesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F051969E18A476B000A0E7A8 /* DataClassesTest.m */; };
+		F05196A018A4797E00A0E7A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F051969B18A4745800A0E7A8 /* XCTest.framework */; };
 		F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */; };
 		F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */; };
 		F0DABE551851807D0043F2FC /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE531851807D0043F2FC /* ezgconverter.xcdatamodeld */; };
@@ -76,11 +77,12 @@
 		F010239317C304450046087B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F010239617C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F01023A017C304450046087B /* EZGrocsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZGrocsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F01023A117C304450046087B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		F01023A917C304450046087B /* EZGrocsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZGrocsTests-Info.plist"; sourceTree = "<group>"; };
 		F01023AB17C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F01023AD17C304450046087B /* EZGrocsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZGrocsTests.h; sourceTree = "<group>"; };
 		F01023AE17C304450046087B /* EZGrocsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZGrocsTests.m; sourceTree = "<group>"; };
+		F051969B18A4745800A0E7A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F051969E18A476B000A0E7A8 /* DataClassesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClassesTest.m; sourceTree = "<group>"; };
 		F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShoppingLib.xcodeproj; path = ../../../Frameworks/ShoppingLib/ShoppingLib.xcodeproj; sourceTree = "<group>"; };
 		F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledSpinnerView.h; sourceTree = "<group>"; };
 		F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledSpinnerView.m; sourceTree = "<group>"; };
@@ -110,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F01023A217C304450046087B /* SenTestingKit.framework in Frameworks */,
+				F05196A018A4797E00A0E7A8 /* XCTest.framework in Frameworks */,
 				F01023A317C304450046087B /* UIKit.framework in Frameworks */,
 				F01023A417C304450046087B /* Foundation.framework in Frameworks */,
 			);
@@ -142,11 +144,11 @@
 		F010237C17C304450046087B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F051969B18A4745800A0E7A8 /* XCTest.framework */,
 				F0DABE5D185181760043F2FC /* CoreData.framework */,
 				F010237D17C304450046087B /* UIKit.framework */,
 				F010237F17C304450046087B /* Foundation.framework */,
 				F010238117C304450046087B /* CoreGraphics.framework */,
-				F01023A117C304450046087B /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 		F01023A717C304450046087B /* EZGrocsTests */ = {
 			isa = PBXGroup;
 			children = (
+				F051969E18A476B000A0E7A8 /* DataClassesTest.m */,
 				F01023AD17C304450046087B /* EZGrocsTests.h */,
 				F01023AE17C304450046087B /* EZGrocsTests.m */,
 				F01023A817C304450046087B /* Supporting Files */,
@@ -260,7 +263,6 @@
 				F010239B17C304450046087B /* Sources */,
 				F010239C17C304450046087B /* Frameworks */,
 				F010239D17C304450046087B /* Resources */,
-				F010239E17C304450046087B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -346,22 +348,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		F010239E17C304450046087B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F010237617C304450046087B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -383,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F051969F18A476B000A0E7A8 /* DataClassesTest.m in Sources */,
 				F01023AF17C304450046087B /* EZGrocsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +478,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZGrocs/EZGrocs-Prefix.pch";
 				INFOPLIST_FILE = "EZGrocs/EZGrocs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -507,6 +495,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZGrocs/EZGrocs-Prefix.pch";
 				INFOPLIST_FILE = "EZGrocs/EZGrocs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -518,12 +507,14 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZGrocs.app/EZGrocs";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZGrocs/EZGrocs-Prefix.pch";
 				INFOPLIST_FILE = "EZGrocsTests/EZGrocsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -535,12 +526,14 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EZGrocs.app/EZGrocs";
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EZGrocs/EZGrocs-Prefix.pch";
 				INFOPLIST_FILE = "EZGrocsTests/EZGrocsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
