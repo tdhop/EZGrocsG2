@@ -23,8 +23,8 @@
 		F01023A417C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
 		F01023AC17C304450046087B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01023AA17C304450046087B /* InfoPlist.strings */; };
 		F01023AF17C304450046087B /* EZGrocsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01023AE17C304450046087B /* EZGrocsTests.m */; };
-		F051969F18A476B000A0E7A8 /* DataClassesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F051969E18A476B000A0E7A8 /* DataClassesTest.m */; };
 		F05196A018A4797E00A0E7A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F051969B18A4745800A0E7A8 /* XCTest.framework */; };
+		F05196A418A47F2200A0E7A8 /* DataClassesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F05196A318A47F2200A0E7A8 /* DataClassesTest.m */; };
 		F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */; };
 		F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */; };
 		F0DABE551851807D0043F2FC /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE531851807D0043F2FC /* ezgconverter.xcdatamodeld */; };
@@ -82,7 +82,7 @@
 		F01023AD17C304450046087B /* EZGrocsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZGrocsTests.h; sourceTree = "<group>"; };
 		F01023AE17C304450046087B /* EZGrocsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZGrocsTests.m; sourceTree = "<group>"; };
 		F051969B18A4745800A0E7A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F051969E18A476B000A0E7A8 /* DataClassesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClassesTest.m; sourceTree = "<group>"; };
+		F05196A318A47F2200A0E7A8 /* DataClassesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClassesTest.m; sourceTree = "<group>"; };
 		F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShoppingLib.xcodeproj; path = ../../../Frameworks/ShoppingLib/ShoppingLib.xcodeproj; sourceTree = "<group>"; };
 		F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledSpinnerView.h; sourceTree = "<group>"; };
 		F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledSpinnerView.m; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		F01023A717C304450046087B /* EZGrocsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F051969E18A476B000A0E7A8 /* DataClassesTest.m */,
+				F05196A318A47F2200A0E7A8 /* DataClassesTest.m */,
 				F01023AD17C304450046087B /* EZGrocsTests.h */,
 				F01023AE17C304450046087B /* EZGrocsTests.m */,
 				F01023A817C304450046087B /* Supporting Files */,
@@ -369,7 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F051969F18A476B000A0E7A8 /* DataClassesTest.m in Sources */,
+				F05196A418A47F2200A0E7A8 /* DataClassesTest.m in Sources */,
 				F01023AF17C304450046087B /* EZGrocsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
