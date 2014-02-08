@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0500"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F010237917C304450046087B"
+               BlueprintIdentifier = "F0BD857C18A5BDFB00030690"
                BuildableName = "EZGrocs.app"
                BlueprintName = "EZGrocs"
                ReferencedContainer = "container:EZGrocs.xcodeproj">
@@ -32,8 +32,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F010239F17C304450046087B"
-               BuildableName = "EZGrocsTests.octest"
+               BlueprintIdentifier = "F0BD859D18A5BDFB00030690"
+               BuildableName = "EZGrocsTests.xctest"
                BlueprintName = "EZGrocsTests"
                ReferencedContainer = "container:EZGrocs.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F010237917C304450046087B"
+            BlueprintIdentifier = "F0BD857C18A5BDFB00030690"
             BuildableName = "EZGrocs.app"
             BlueprintName = "EZGrocs"
             ReferencedContainer = "container:EZGrocs.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F010237917C304450046087B"
+            BlueprintIdentifier = "F0BD857C18A5BDFB00030690"
             BuildableName = "EZGrocs.app"
             BlueprintName = "EZGrocs"
             ReferencedContainer = "container:EZGrocs.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F010237917C304450046087B"
+            BlueprintIdentifier = "F0BD857C18A5BDFB00030690"
             BuildableName = "EZGrocs.app"
             BlueprintName = "EZGrocs"
             ReferencedContainer = "container:EZGrocs.xcodeproj">

@@ -2,31 +2,33 @@
 //  EZGrocsTests.m
 //  EZGrocsTests
 //
-//  Created by Tim Hopmann on 8/19/13.
-//  Copyright (c) 2013 EZLifeSoftware.com. All rights reserved.
+//  Created by Tim Hopmann on 2/7/14.
+//  Copyright (c) 2014 EZLifeSoftware.com. All rights reserved.
 //
 
-#import "EZGrocsTests.h"
+#import <XCTest/XCTest.h>
+
+@interface EZGrocsTests : XCTestCase
+
+@end
 
 @implementation EZGrocsTests
 
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
 - (void)testExample
 {
-    XCTFail(@"Unit tests are not implemented yet in EZGrocsTests");
+    XCTFail(@"No tests implemented for EZGrocs");
 }
 
 @end
