@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F03A9CBF18A662D4009F0F60 /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CBD18A662D4009F0F60 /* ezgconverter.xcdatamodeld */; };
 		F03A9CC118A66457009F0F60 /* DataClassesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CC018A66457009F0F60 /* DataClassesTest.m */; };
 		F03A9CC418A6688F009F0F60 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03A9CC218A6688F009F0F60 /* MainStoryboard.storyboard */; };
 		F03A9CC718A668D3009F0F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F03A9CC518A668D3009F0F60 /* InfoPlist.strings */; };
+		F03A9CCC18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CCA18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld */; };
 		F0BD858118A5BDFB00030690 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858018A5BDFB00030690 /* Foundation.framework */; };
 		F0BD858318A5BDFB00030690 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858218A5BDFB00030690 /* CoreGraphics.framework */; };
 		F0BD858518A5BDFB00030690 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858418A5BDFB00030690 /* UIKit.framework */; };
@@ -46,10 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F03A9CBE18A662D4009F0F60 /* ezgconverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ezgconverter.xcdatamodel; sourceTree = "<group>"; };
 		F03A9CC018A66457009F0F60 /* DataClassesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClassesTest.m; sourceTree = "<group>"; };
 		F03A9CC318A6688F009F0F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = EZGrocs/en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F03A9CC618A668D3009F0F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = EZGrocs/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F03A9CCB18A6BAC6009F0F60 /* ezgconverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ezgconverter.xcdatamodel; sourceTree = "<group>"; };
 		F0BD857D18A5BDFB00030690 /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BD858018A5BDFB00030690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0BD858218A5BDFB00030690 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,7 +183,7 @@
 				F0BD85C118A5BF1A00030690 /* ProductItem.m */,
 				F0BD85C218A5BF1A00030690 /* SectionNames.h */,
 				F0BD85C318A5BF1A00030690 /* SectionNames.m */,
-				F03A9CBD18A662D4009F0F60 /* ezgconverter.xcdatamodeld */,
+				F03A9CCA18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				F0BD85BF18A5BEFF00030690 /* PlanListVC.m in Sources */,
 				F0BD85D218A5BF7600030690 /* main.m in Sources */,
 				F0BD85BC18A5BEFF00030690 /* EZAppDelegate.m in Sources */,
-				F03A9CBF18A662D4009F0F60 /* ezgconverter.xcdatamodeld in Sources */,
+				F03A9CCC18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld in Sources */,
 				F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,14 +549,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F03A9CBD18A662D4009F0F60 /* ezgconverter.xcdatamodeld */ = {
+		F03A9CCA18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F03A9CBE18A662D4009F0F60 /* ezgconverter.xcdatamodel */,
+				F03A9CCB18A6BAC6009F0F60 /* ezgconverter.xcdatamodel */,
 			);
-			currentVersion = F03A9CBE18A662D4009F0F60 /* ezgconverter.xcdatamodel */;
+			currentVersion = F03A9CCB18A6BAC6009F0F60 /* ezgconverter.xcdatamodel */;
 			name = ezgconverter.xcdatamodeld;
-			path = ../../../../Dropbox/Development/EZGrocs/EZGrocsGen2/ezgconverter/ezgconverter/ezgconverter.xcdatamodeld;
+			path = ../../ezgconverter/ezgconverter/ezgconverter.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
