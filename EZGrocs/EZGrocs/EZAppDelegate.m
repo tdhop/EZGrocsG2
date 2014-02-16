@@ -77,7 +77,6 @@
                  NSLog(@"file open success=%d", success);
              }
             [self registryDidOpen];
-             
          }];
     } else NSLog(@"VikingsDB file not found");
     
