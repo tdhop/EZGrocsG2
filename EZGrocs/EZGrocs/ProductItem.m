@@ -1,9 +1,9 @@
 //
 //  ProductItem.m
-//  ezgconverter
+//  EZGrocs
 //
-//  Created by Mark A Stewart on 11/8/13.
-//  Copyright (c) 2013 EZLifeSoftware.com. All rights reserved.
+//  Created by Tim Hopmann on 2/8/14.
+//  Copyright (c) 2014 EZLifeSoftware.com. All rights reserved.
 //
 
 #import "ProductItem.h"
@@ -12,8 +12,10 @@
 @implementation ProductItem
 
 @dynamic itemName;
-@dynamic sectionName;
-@dynamic itemIdentifier;
-@dynamic sectionIndex;
+@dynamic sectionID;
+@dynamic userItemFlag;
+
+    //Manually added fetched property because Xcode does not automatically do so
+@dynamic sectionInfo;
 
 @end

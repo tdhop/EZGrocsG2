@@ -10,7 +10,13 @@
 		F03A9CC118A66457009F0F60 /* DataClassesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CC018A66457009F0F60 /* DataClassesTest.m */; };
 		F03A9CC418A6688F009F0F60 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F03A9CC218A6688F009F0F60 /* MainStoryboard.storyboard */; };
 		F03A9CC718A668D3009F0F60 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F03A9CC518A668D3009F0F60 /* InfoPlist.strings */; };
-		F03A9CCC18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CCA18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld */; };
+		F03A9CF318A6C0AB009F0F60 /* EZGrocs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CF118A6C0AB009F0F60 /* EZGrocs.xcdatamodeld */; };
+		F03A9CF918A6C466009F0F60 /* ShoppingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CF818A6C466009F0F60 /* ShoppingItem.m */; };
+		F03A9CFC18A6C466009F0F60 /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CFB18A6C466009F0F60 /* ProductItem.m */; };
+		F03A9CFF18A6C466009F0F60 /* ListPortfolio.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CFE18A6C466009F0F60 /* ListPortfolio.m */; };
+		F03A9D0218A6C466009F0F60 /* ShoppingItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9D0118A6C466009F0F60 /* ShoppingItemList.m */; };
+		F03A9D0518A6C466009F0F60 /* StoreSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9D0418A6C466009F0F60 /* StoreSection.m */; };
+		F03A9D0818A6C467009F0F60 /* ConsumerNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9D0718A6C467009F0F60 /* ConsumerNotes.m */; };
 		F0BD858118A5BDFB00030690 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858018A5BDFB00030690 /* Foundation.framework */; };
 		F0BD858318A5BDFB00030690 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858218A5BDFB00030690 /* CoreGraphics.framework */; };
 		F0BD858518A5BDFB00030690 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858418A5BDFB00030690 /* UIKit.framework */; };
@@ -23,8 +29,6 @@
 		F0BD85BC18A5BEFF00030690 /* EZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85B618A5BEFF00030690 /* EZAppDelegate.m */; };
 		F0BD85BE18A5BEFF00030690 /* FavoritesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85B918A5BEFF00030690 /* FavoritesVC.m */; };
 		F0BD85BF18A5BEFF00030690 /* PlanListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85BB18A5BEFF00030690 /* PlanListVC.m */; };
-		F0BD85C418A5BF1A00030690 /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85C118A5BF1A00030690 /* ProductItem.m */; };
-		F0BD85C518A5BF1A00030690 /* SectionNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85C318A5BF1A00030690 /* SectionNames.m */; };
 		F0BD85D018A5BF7600030690 /* EZGrocs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0BD85C918A5BF7600030690 /* EZGrocs-Info.plist */; };
 		F0BD85D218A5BF7600030690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85CB18A5BF7600030690 /* main.m */; };
 		F0BD85D318A5BF7600030690 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BD85CD18A5BF7600030690 /* Default.png */; };
@@ -49,7 +53,19 @@
 		F03A9CC018A66457009F0F60 /* DataClassesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataClassesTest.m; sourceTree = "<group>"; };
 		F03A9CC318A6688F009F0F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = EZGrocs/en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F03A9CC618A668D3009F0F60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = EZGrocs/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F03A9CCB18A6BAC6009F0F60 /* ezgconverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ezgconverter.xcdatamodel; sourceTree = "<group>"; };
+		F03A9CF218A6C0AB009F0F60 /* EZGrocs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EZGrocs.xcdatamodel; sourceTree = "<group>"; };
+		F03A9CF718A6C466009F0F60 /* ShoppingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItem.h; sourceTree = "<group>"; };
+		F03A9CF818A6C466009F0F60 /* ShoppingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingItem.m; sourceTree = "<group>"; };
+		F03A9CFA18A6C466009F0F60 /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
+		F03A9CFB18A6C466009F0F60 /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
+		F03A9CFD18A6C466009F0F60 /* ListPortfolio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPortfolio.h; sourceTree = "<group>"; };
+		F03A9CFE18A6C466009F0F60 /* ListPortfolio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPortfolio.m; sourceTree = "<group>"; };
+		F03A9D0018A6C466009F0F60 /* ShoppingItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItemList.h; sourceTree = "<group>"; };
+		F03A9D0118A6C466009F0F60 /* ShoppingItemList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingItemList.m; sourceTree = "<group>"; };
+		F03A9D0318A6C466009F0F60 /* StoreSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreSection.h; sourceTree = "<group>"; };
+		F03A9D0418A6C466009F0F60 /* StoreSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreSection.m; sourceTree = "<group>"; };
+		F03A9D0618A6C467009F0F60 /* ConsumerNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerNotes.h; sourceTree = "<group>"; };
+		F03A9D0718A6C467009F0F60 /* ConsumerNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumerNotes.m; sourceTree = "<group>"; };
 		F0BD857D18A5BDFB00030690 /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BD858018A5BDFB00030690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0BD858218A5BDFB00030690 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,10 +82,6 @@
 		F0BD85B918A5BEFF00030690 /* FavoritesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesVC.m; sourceTree = "<group>"; };
 		F0BD85BA18A5BEFF00030690 /* PlanListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListVC.h; sourceTree = "<group>"; };
 		F0BD85BB18A5BEFF00030690 /* PlanListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListVC.m; sourceTree = "<group>"; };
-		F0BD85C018A5BF1A00030690 /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
-		F0BD85C118A5BF1A00030690 /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
-		F0BD85C218A5BF1A00030690 /* SectionNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionNames.h; sourceTree = "<group>"; };
-		F0BD85C318A5BF1A00030690 /* SectionNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionNames.m; sourceTree = "<group>"; };
 		F0BD85C918A5BF7600030690 /* EZGrocs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EZGrocs-Info.plist"; sourceTree = "<group>"; };
 		F0BD85CB18A5BF7600030690 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0BD85CC18A5BF7600030690 /* EZGrocs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EZGrocs-Prefix.pch"; sourceTree = "<group>"; };
@@ -179,11 +191,19 @@
 		F0BD85C618A5BF2500030690 /* Data Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F0BD85C018A5BF1A00030690 /* ProductItem.h */,
-				F0BD85C118A5BF1A00030690 /* ProductItem.m */,
-				F0BD85C218A5BF1A00030690 /* SectionNames.h */,
-				F0BD85C318A5BF1A00030690 /* SectionNames.m */,
-				F03A9CCA18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld */,
+				F03A9CF118A6C0AB009F0F60 /* EZGrocs.xcdatamodeld */,
+				F03A9D0618A6C467009F0F60 /* ConsumerNotes.h */,
+				F03A9D0718A6C467009F0F60 /* ConsumerNotes.m */,
+				F03A9D0318A6C466009F0F60 /* StoreSection.h */,
+				F03A9D0418A6C466009F0F60 /* StoreSection.m */,
+				F03A9D0018A6C466009F0F60 /* ShoppingItemList.h */,
+				F03A9D0118A6C466009F0F60 /* ShoppingItemList.m */,
+				F03A9CFD18A6C466009F0F60 /* ListPortfolio.h */,
+				F03A9CFE18A6C466009F0F60 /* ListPortfolio.m */,
+				F03A9CFA18A6C466009F0F60 /* ProductItem.h */,
+				F03A9CFB18A6C466009F0F60 /* ProductItem.m */,
+				F03A9CF718A6C466009F0F60 /* ShoppingItem.h */,
+				F03A9CF818A6C466009F0F60 /* ShoppingItem.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -315,14 +335,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0BD85C518A5BF1A00030690 /* SectionNames.m in Sources */,
-				F0BD85C418A5BF1A00030690 /* ProductItem.m in Sources */,
+				F03A9D0218A6C466009F0F60 /* ShoppingItemList.m in Sources */,
+				F03A9CF918A6C466009F0F60 /* ShoppingItem.m in Sources */,
 				F0BD85DD18A5BFE900030690 /* LabeledSpinnerView.m in Sources */,
+				F03A9D0518A6C466009F0F60 /* StoreSection.m in Sources */,
+				F03A9CFC18A6C466009F0F60 /* ProductItem.m in Sources */,
+				F03A9CF318A6C0AB009F0F60 /* EZGrocs.xcdatamodeld in Sources */,
+				F03A9D0818A6C467009F0F60 /* ConsumerNotes.m in Sources */,
 				F0BD85BE18A5BEFF00030690 /* FavoritesVC.m in Sources */,
 				F0BD85BF18A5BEFF00030690 /* PlanListVC.m in Sources */,
 				F0BD85D218A5BF7600030690 /* main.m in Sources */,
 				F0BD85BC18A5BEFF00030690 /* EZAppDelegate.m in Sources */,
-				F03A9CCC18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld in Sources */,
+				F03A9CFF18A6C466009F0F60 /* ListPortfolio.m in Sources */,
 				F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,14 +573,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		F03A9CCA18A6BAC6009F0F60 /* ezgconverter.xcdatamodeld */ = {
+		F03A9CF118A6C0AB009F0F60 /* EZGrocs.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				F03A9CCB18A6BAC6009F0F60 /* ezgconverter.xcdatamodel */,
+				F03A9CF218A6C0AB009F0F60 /* EZGrocs.xcdatamodel */,
 			);
-			currentVersion = F03A9CCB18A6BAC6009F0F60 /* ezgconverter.xcdatamodel */;
-			name = ezgconverter.xcdatamodeld;
-			path = ../../ezgconverter/ezgconverter/ezgconverter.xcdatamodeld;
+			currentVersion = F03A9CF218A6C0AB009F0F60 /* EZGrocs.xcdatamodel */;
+			path = EZGrocs.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -21,7 +21,7 @@
 #import "SLShoppingListVC.h"
 #import "LabeledSpinnerView.h"
 #import "ProductItem.h"
-#import "SectionNames.h"
+#import "StoreSection.h"
 
 @interface SLShoppingListVC ()
 

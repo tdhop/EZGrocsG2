@@ -12,12 +12,9 @@
 		56E30BE417FBB0A600C5B1B3 /* CHCSVParser.h in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE317FBB0A600C5B1B3 /* CHCSVParser.h */; };
 		56E30BE918207D7C00C5B1B3 /* ItemParseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30BE818207D7C00C5B1B3 /* ItemParseDelegate.m */; };
 		56E30C0D18288C9200C5B1B3 /* SectionParseDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30C0C18288C9200C5B1B3 /* SectionParseDelegate.m */; };
-		56E30C13182DBE4F00C5B1B3 /* SectionNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30C12182DBE4F00C5B1B3 /* SectionNames.m */; };
-		56E30C19182DC23600C5B1B3 /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E30C18182DC23600C5B1B3 /* ProductItem.m */; };
 		F010235F17C300B40046087B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010235E17C300B40046087B /* CoreData.framework */; };
 		F010236117C300B40046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010236017C300B40046087B /* Foundation.framework */; };
 		F010236417C300B40046087B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F010236317C300B40046087B /* main.m */; };
-		F010236917C300B40046087B /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F010236717C300B40046087B /* ezgconverter.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,16 +25,11 @@
 		56E30BE818207D7C00C5B1B3 /* ItemParseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemParseDelegate.m; sourceTree = "<group>"; };
 		56E30C0B18288C9200C5B1B3 /* SectionParseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionParseDelegate.h; sourceTree = "<group>"; };
 		56E30C0C18288C9200C5B1B3 /* SectionParseDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionParseDelegate.m; sourceTree = "<group>"; };
-		56E30C11182DBE4E00C5B1B3 /* SectionNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionNames.h; sourceTree = "<group>"; };
-		56E30C12182DBE4F00C5B1B3 /* SectionNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionNames.m; sourceTree = "<group>"; };
-		56E30C17182DC23600C5B1B3 /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItem.h; sourceTree = "<group>"; };
-		56E30C18182DC23600C5B1B3 /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItem.m; sourceTree = "<group>"; };
 		F010235B17C300B40046087B /* ezgconverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ezgconverter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F010235E17C300B40046087B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F010236017C300B40046087B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F010236317C300B40046087B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F010236617C300B40046087B /* ezgconverter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ezgconverter-Prefix.pch"; sourceTree = "<group>"; };
-		F010236817C300B40046087B /* ezgconverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ezgconverter.xcdatamodel; sourceTree = "<group>"; };
 		F010236A17C300B40046087B /* ezgconverter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ezgconverter.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,11 +82,6 @@
 				56E30C0C18288C9200C5B1B3 /* SectionParseDelegate.m */,
 				F010236317C300B40046087B /* main.m */,
 				F010236A17C300B40046087B /* ezgconverter.1 */,
-				56E30C17182DC23600C5B1B3 /* ProductItem.h */,
-				56E30C18182DC23600C5B1B3 /* ProductItem.m */,
-				F010236717C300B40046087B /* ezgconverter.xcdatamodeld */,
-				56E30C11182DBE4E00C5B1B3 /* SectionNames.h */,
-				56E30C12182DBE4F00C5B1B3 /* SectionNames.m */,
 				F010236517C300B40046087B /* Supporting Files */,
 				56E30BE718207D7C00C5B1B3 /* ItemParseDelegate.h */,
 				56E30BE818207D7C00C5B1B3 /* ItemParseDelegate.m */,
@@ -181,11 +168,8 @@
 				56E30BE217FBB08D00C5B1B3 /* CHCSV.h in Sources */,
 				56E30BE017FBA51200C5B1B3 /* CHCSVParser.m in Sources */,
 				F010236417C300B40046087B /* main.m in Sources */,
-				F010236917C300B40046087B /* ezgconverter.xcdatamodeld in Sources */,
 				56E30BE918207D7C00C5B1B3 /* ItemParseDelegate.m in Sources */,
 				56E30C0D18288C9200C5B1B3 /* SectionParseDelegate.m in Sources */,
-				56E30C13182DBE4F00C5B1B3 /* SectionNames.m in Sources */,
-				56E30C19182DC23600C5B1B3 /* ProductItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,19 +275,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F010236717C300B40046087B /* ezgconverter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F010236817C300B40046087B /* ezgconverter.xcdatamodel */,
-			);
-			currentVersion = F010236817C300B40046087B /* ezgconverter.xcdatamodel */;
-			path = ezgconverter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F010235317C300B40046087B /* Project object */;
 }

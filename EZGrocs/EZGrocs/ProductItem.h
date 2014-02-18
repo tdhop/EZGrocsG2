@@ -1,9 +1,9 @@
 //
 //  ProductItem.h
-//  ezgconverter
+//  EZGrocs
 //
-//  Created by Mark A Stewart on 11/8/13.
-//  Copyright (c) 2013 EZLifeSoftware.com. All rights reserved.
+//  Created by Tim Hopmann on 2/8/14.
+//  Copyright (c) 2014 EZLifeSoftware.com. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,8 +13,10 @@
 @interface ProductItem : NSManagedObject
 
 @property (nonatomic, retain) NSString * itemName;
-@property (nonatomic, retain) NSString * sectionName;
-@property (nonatomic, retain) NSString * itemIdentifier;
-@property (nonatomic, retain) NSNumber * sectionIndex;
+@property (nonatomic, retain) NSNumber * sectionID;
+@property (nonatomic, retain) NSNumber * userItemFlag;
+
+    //Manually created reference to fetch property -- is not automatically created by Xcode
+@property (nonatomic, retain) NSArray *sectionInfo;
 
 @end

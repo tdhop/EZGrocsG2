@@ -28,7 +28,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"No tests implemented for EZGrocs");
+        //XCTFail(@"No tests implemented for EZGrocs");
 }
 
 @end
