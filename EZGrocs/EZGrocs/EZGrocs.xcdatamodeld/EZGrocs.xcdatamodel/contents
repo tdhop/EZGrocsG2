@@ -32,12 +32,13 @@
         <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sectionSequenceID" optional="YES" attributeType="Integer 16" syncable="YES"/>
     </entity>
+    <configuration name="Configuration"/>
     <elements>
-        <element name="ConsumerNotes" positionX="-99" positionY="189" width="128" height="88"/>
-        <element name="ListPortfolio" positionX="-81" positionY="372" width="128" height="58"/>
-        <element name="ProductItem" positionX="162" positionY="9" width="128" height="116"/>
-        <element name="ShoppingItem" positionX="160" positionY="192" width="128" height="103"/>
-        <element name="ShoppingItemList" positionX="169" positionY="342" width="128" height="88"/>
-        <element name="StoreSection" positionX="-72" positionY="42" width="128" height="88"/>
+        <element name="ConsumerNotes" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ListPortfolio" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ProductItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ShoppingItem" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="ShoppingItemList" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="StoreSection" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

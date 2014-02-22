@@ -19,4 +19,8 @@
     //Manually created reference to fetch property -- is not automatically created by Xcode
 @property (nonatomic, retain) NSArray *sectionInfo;
 
+    // METHODS
+
++ (ProductItem *) newWithItemName: (NSString *) itemName section: (NSString *) sectionName managedObjectContext: (NSManagedObjectContext *) moc;
+
 @end
