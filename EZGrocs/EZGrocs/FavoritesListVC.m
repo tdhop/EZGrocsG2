@@ -27,18 +27,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+                    // Do additional setup after loading view.
+    
+    self.shoppingListTable.dataSource = self;
+    self.shoppingListTable.delegate =  self;
 }
 
-- (void) proceed
+- (IBAction)tapEdit:(id)sender
 {
-    EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
-    self.productTableContext=myAppDelegate.productRegistryContext;
-    
-    NSLog(@"FavVC: proceed: MOC=%@",self.productTableContext);
-    
-    [super proceed];
+    [super editRow:(UIBarButtonItem *)sender];
 }
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -8,9 +8,9 @@
 
 #import "ManageShoppingListVC.h"
 #import "EZAppDelegate.h"
+#import "ProductItem.h"
 
 @interface ManageShoppingListVC ()
-
 @end
 
 @implementation ManageShoppingListVC
@@ -32,7 +32,6 @@
     
     EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
     self.productTableContext=myAppDelegate.productRegistryContext;
-    NSLog(@"MFVC:VDL MOC=%@",self.productTableContext);
     
                     /* If no Object Context, app delegate not finished loading, so
                        wait. If loading finished and were waiting, cancel wait.
@@ -48,10 +47,77 @@
     }
                     /* Perform previous steps before calling super ViewDidLoad
                        otherwise super ViewDidLoad will conclude should proceed
-                       prematurely since shouldWaitForProceedMessage property will
-                       default to FALSE.
+                       prematurely since shouldWaitForProceedMessage property 
+                       will default to FALSE.
                      */
     [super viewDidLoad];
+}
+
+                    /* Method invoked from appDelegate when ObjectContext is loaded.
+                       Set object context property (defined in SLShoppingList) and
+                       invoke proceed in super to begin fetch and list initialization.
+                    */
+- (void) proceed
+{
+    EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
+    self.productTableContext=myAppDelegate.productRegistryContext;
+    
+    [super proceed];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+                    /* Get shopping list item pointed to by indexpath and configure the cell - item name and notes.
+                    */
+    ProductItem *product = [self.shoppingListResultsController objectAtIndexPath:indexPath];
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+    nameLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@", product.itemName, product.sectionName, product.sectionIndex];
+    UILabel *notesLabel = (UILabel *)[cell viewWithTag:2];
+    notesLabel.text = @"3 jars of each";
+    
+    return cell;
+}
+
+                    // Support Delete for Edit style
+- (void)editRow:(UIBarButtonItem *)sender
+{
+    if (self.editing)
+    {
+        sender.title = @"Edit";
+        sender.style = UIBarButtonItemStylePlain;
+        [super setEditing:NO animated:YES];
+        [self.shoppingListTable setEditing:NO animated:YES];
+    } else
+    {
+        sender.title = @"Done";
+        sender.style = UIBarButtonItemStyleDone;
+        [super setEditing:YES animated:YES];
+        [self.shoppingListTable setEditing:YES animated:YES];
+    }
+}
+                    /* Override to support editing table view on swipe and perform
+                       action to delete the shopping list item from the list.
+                    */
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSLog (@"Do delete");
+    }
+                    // Not currently supporting Insert style.
+    else if (editingStyle == UITableViewCellEditingStyleInsert)
+    {
+        
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"MngShopList: didselect row");
 }
 
 - (void)didReceiveMemoryWarning

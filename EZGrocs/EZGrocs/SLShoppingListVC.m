@@ -27,7 +27,6 @@
 
 @property (strong, nonatomic) LabeledSpinnerView *spinnerView;
 @property BOOL proceedComplete;
-@property NSFetchedResultsController *shoppingListResultsController;
 
 @end
 
@@ -41,53 +40,72 @@
 }
 
 
-/*
-- (id)initWithStyle:(UITableViewStyle)style
+
+/* - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
+        
     }
     return self;
-}
- */
+} */
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-        // Determine if it's time to load the table or if I should wait until I get a signal
-        // For now, just turn on a spinner
 
         // Optionally add configurable static header at top of table
         // TEST CODE - for now, just add a table header
-    CGRect tableHeaderFrame = CGRectMake(0, 0, 320, 20);
+    /* CGRect tableHeaderFrame = CGRectMake(0, 0, 320, 20);
     UIView *tableHeader = [[UIView alloc] initWithFrame:tableHeaderFrame];
-    tableHeader.backgroundColor = [UIColor grayColor];
-        // TEST CODE - and add a label to it saying "Table Header"
+    tableHeader.backgroundColor = [UIColor magentaColor];
     CGRect tableHeaderLabelFrame = CGRectMake(20, 3, 280, 14);
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:tableHeaderLabelFrame];
     headerLabel.textAlignment = NSTextAlignmentCenter;
     headerLabel.text = @"Table Header";
     [tableHeader addSubview:headerLabel];
     self.shoppingListTable.tableHeaderView = tableHeader;
+    self.shoppingListTable.separatorColor = [UIColor blueColor]; */
         // END TEST CODE
     
-        // IF NOT SHOULDWAIT: Send 'proceed' message to self
-        // ELSE: wait for proceed message
-    if (!self.shouldWaitForProceedMessage) {
+                    /* IF NOT SHOULDWAIT: Send 'proceed' message to self; otherwise
+                       wait for proceed message
+                     */
+    if (!self.shouldWaitForProceedMessage)
+    {
         [self proceed];
     }
-
-
-    
 }
+
+/* - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *uiSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 28)];
+    [uiSection setBackgroundColor:[UIColor cyanColor]];
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(8, 4, 320, 20)];
+    id <NSFetchedResultsSectionInfo> sectionInfo=[[self.shoppingListResultsController sections] objectAtIndex:section];
+    headerLabel.text = sectionInfo.name;
+    headerLabel.font = [UIFont fontWithName:@"TimesNewRomanPSMT" size:(CGFloat)15];
+    [uiSection addSubview:headerLabel];
+    return uiSection;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return (28.0);
+} */
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{    id <NSFetchedResultsSectionInfo> sectionInfo=[[self.shoppingListResultsController sections] objectAtIndex:section];
+    return (sectionInfo.name);
+}
+
+
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -97,19 +115,23 @@
     
         // Lock to ensure that proceed doesn't run in the middle of this code
     [viewWillAppearLock lock];
+    
     if (self.shouldWaitForProceedMessage && !self.proceedComplete) {
             // Add & start spinner with text "Loading"
         self.spinnerView = [[LabeledSpinnerView alloc] initWithStyle: LabeledSpinnerCenter];
         self.spinnerView.spinnerText = @"Loading...";
         [self.spinnerView start];
         [self.view addSubview:self.spinnerView];
+        [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     } else {
             // In this case either I needn't wait OR proceed has already run so I should just reload data
         self.shoppingListTable.dataSource = (id <UITableViewDataSource>) self;
+        self.shoppingListTable.delegate = (id <UITableViewDelegate>) self;
         [self.shoppingListTable reloadData];
     }
         // End of critical code segment - Unlock
     [viewWillAppearLock unlock];
+    
     
 }
 
@@ -132,6 +154,7 @@
     [self.spinnerView removeFromSuperview];
         // Now release the spinner view object
     self.spinnerView = nil;
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     
 
     
@@ -141,23 +164,33 @@
         // Create Fetch Request
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ProductItem"];
         // Sort by the itemName attribute
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES];
+    NSSortDescriptor *sectionSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"sectionIndex" ascending:YES];
+    NSSortDescriptor *itemSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES];
         // Add sort descriptor to Fetch Request
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sectionSortDescriptor, itemSortDescriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
-        
+    
+                    // Set predicate if property set.
+    if (self.filterDataInList != nil)
+    {
+        NSPredicate *pred = [NSPredicate predicateWithFormat:self.filterDataInList];
+        [fetchRequest setPredicate:pred];
+    }
+    
         // Now create FRC with Fetch Request
     self.shoppingListResultsController = [[NSFetchedResultsController alloc]
                                           initWithFetchRequest:fetchRequest
                                           managedObjectContext:self.productTableContext
-                                          sectionNameKeyPath:@"sectionName"
+                                          sectionNameKeyPath:@"sectionIndex"
                                           cacheName:self.cacheName];
+    
         // TEST CODE
     [self.shoppingListResultsController performFetch:nil];
         // END TEST CODE
     
         // Now that everything is ready to go, set data source and tell the tableview to reload
     self.shoppingListTable.dataSource = self;
+    self.shoppingListTable.delegate = self;
     [self.shoppingListTable reloadData];
 }
 
@@ -173,10 +206,9 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    // NSLog(@"Sections %@", [self.shoppingListResultsController sections]);
+    
     NSInteger count;
     count = [[self.shoppingListResultsController sections] count];
-    NSLog(@"SLVC #sections = %d",count);
     return count; // count;
 }
 
@@ -187,15 +219,16 @@
     if ([[self.shoppingListResultsController sections] count] > 0)
     {
         id <NSFetchedResultsSectionInfo> sectionInfo = [[self.shoppingListResultsController sections] objectAtIndex:section];
-        NSLog(@"SLVC: # in section=%d",[sectionInfo numberOfObjects]);
         return [sectionInfo numberOfObjects];
     } else
         return 0;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
+    
         //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -206,55 +239,12 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-} */
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"in didSelectRow");
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 @end

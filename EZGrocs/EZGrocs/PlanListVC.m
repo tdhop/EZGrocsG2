@@ -27,17 +27,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+                    // Do additional setup after loading view.
+    
+    self.shoppingListTable.dataSource = self;
+    self.shoppingListTable.delegate =  self;
 }
 
-- (void) proceed
+                    // Configure count and coupon icon for table row.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
-    self.productTableContext=myAppDelegate.productRegistryContext;
+                    // Get cell for next row in table.
     
-    NSLog(@"PLVC: proceed: MOC=%@",self.productTableContext);
+    UITableViewCell *cell = (UITableViewCell *)[super tableView:tableView cellForRowAtIndexPath:indexPath];
     
-    [super proceed];
+    return cell;
+}
+
+                    // Invoke super method to implement Edit protocol
+- (IBAction)tapEdit:(UIBarButtonItem *)sender
+{
+    [super editRow:(UIBarButtonItem *)sender];
 }
 
 - (void)didReceiveMemoryWarning

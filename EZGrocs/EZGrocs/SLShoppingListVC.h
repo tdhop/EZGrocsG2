@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface SLShoppingListVC : UIViewController
 
@@ -21,6 +22,11 @@
 - (void) proceed; // Tells SLShoppingListVC to proceed with loading the table data.  Used in conjunction with shouldWaitForProceedMessage.
 
 - (void) initForSegue: (NSManagedObjectContext *) docContext shouldWait: (BOOL) waitFlag;
+
+@property (strong, atomic) NSFetchedResultsController *shoppingListResultsController;
+
+                    // If specified, used to set NSPredicate to filter the list.
+@property (strong, atomic) NSString *filterDataInList;
 
 
 @end

@@ -10,4 +10,8 @@
 
 @interface ManageShoppingListVC : SLShoppingListVC
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void) editRow: (UIBarButtonItem *) sender;
+
 @end

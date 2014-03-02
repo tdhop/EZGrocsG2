@@ -8,6 +8,6 @@
 
 #import "ManageShoppingListVC.h"
 
-@interface PlanListVC : ManageShoppingListVC
+@interface PlanListVC : ManageShoppingListVC <UITableViewDelegate, UITableViewDataSource>
 
 @end

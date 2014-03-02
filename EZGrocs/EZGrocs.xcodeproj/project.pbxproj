@@ -10,6 +10,7 @@
 		568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */; };
 		568CB393189C8AF5006B91F1 /* FavoritesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB392189C8AF5006B91F1 /* FavoritesListVC.m */; };
 		568CB396189C8C4F006B91F1 /* PlanListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB395189C8C4F006B91F1 /* PlanListVC.m */; };
+		56EB94A418B2EB57000DA3C9 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB94A318B2EB57000DA3C9 /* ShoppingListCell.m */; };
 		F010237E17C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
 		F010238017C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
 		F010238217C304450046087B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010238117C304450046087B /* CoreGraphics.framework */; };
@@ -65,6 +66,8 @@
 		568CB392189C8AF5006B91F1 /* FavoritesListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesListVC.m; sourceTree = "<group>"; };
 		568CB394189C8C4F006B91F1 /* PlanListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListVC.h; sourceTree = "<group>"; };
 		568CB395189C8C4F006B91F1 /* PlanListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListVC.m; sourceTree = "<group>"; };
+		56EB94A218B2EB57000DA3C9 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
+		56EB94A318B2EB57000DA3C9 /* ShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListCell.m; sourceTree = "<group>"; };
 		F010237A17C304450046087B /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F010237D17C304450046087B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F010237F17C304450046087B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +167,8 @@
 				F010238C17C304450046087B /* EZAppDelegate.h */,
 				F010238D17C304450046087B /* EZAppDelegate.m */,
 				F010239517C304450046087B /* MainStoryboard.storyboard */,
+				56EB94A218B2EB57000DA3C9 /* ShoppingListCell.h */,
+				56EB94A318B2EB57000DA3C9 /* ShoppingListCell.m */,
 				F010239817C304450046087B /* EZViewController.h */,
 				F010239917C304450046087B /* EZViewController.m */,
 				F0DABE5F1857E89C0043F2FC /* Shared Code */,
@@ -386,6 +391,7 @@
 				568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */,
 				568CB396189C8C4F006B91F1 /* PlanListVC.m in Sources */,
 				F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */,
+				56EB94A418B2EB57000DA3C9 /* ShoppingListCell.m in Sources */,
 				F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */,
 				F010239A17C304450046087B /* EZViewController.m in Sources */,
 			);
