@@ -17,6 +17,12 @@
 		F03A9D0218A6C466009F0F60 /* ShoppingItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9D0118A6C466009F0F60 /* ShoppingItemList.m */; };
 		F03A9D0518A6C466009F0F60 /* StoreSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9D0418A6C466009F0F60 /* StoreSection.m */; };
 		F03A9D0818A6C467009F0F60 /* ConsumerNotes.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9D0718A6C467009F0F60 /* ConsumerNotes.m */; };
+		F046E9D618C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9D518C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.m */; };
+		F046E9D918C3C3F5003E2637 /* ProductItem+ProductItemMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9D818C3C3F5003E2637 /* ProductItem+ProductItemMethods.m */; };
+		F046E9DC18C3C411003E2637 /* StoreSection+StoreSectionMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9DB18C3C411003E2637 /* StoreSection+StoreSectionMethods.m */; };
+		F046E9DF18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9DE18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m */; };
+		F046E9E218C3C803003E2637 /* ShoppingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9E118C3C803003E2637 /* ShoppingListController.m */; };
+		F046E9E718C3D07C003E2637 /* shoppingStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9E618C3D07C003E2637 /* shoppingStoreController.m */; };
 		F0BD858118A5BDFB00030690 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858018A5BDFB00030690 /* Foundation.framework */; };
 		F0BD858318A5BDFB00030690 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858218A5BDFB00030690 /* CoreGraphics.framework */; };
 		F0BD858518A5BDFB00030690 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858418A5BDFB00030690 /* UIKit.framework */; };
@@ -66,6 +72,19 @@
 		F03A9D0418A6C466009F0F60 /* StoreSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreSection.m; sourceTree = "<group>"; };
 		F03A9D0618A6C467009F0F60 /* ConsumerNotes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumerNotes.h; sourceTree = "<group>"; };
 		F03A9D0718A6C467009F0F60 /* ConsumerNotes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumerNotes.m; sourceTree = "<group>"; };
+		F046E9D418C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShoppingItem+ShoppingItemMethods.h"; sourceTree = "<group>"; };
+		F046E9D518C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShoppingItem+ShoppingItemMethods.m"; sourceTree = "<group>"; };
+		F046E9D718C3C3F5003E2637 /* ProductItem+ProductItemMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProductItem+ProductItemMethods.h"; sourceTree = "<group>"; };
+		F046E9D818C3C3F5003E2637 /* ProductItem+ProductItemMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProductItem+ProductItemMethods.m"; sourceTree = "<group>"; };
+		F046E9DA18C3C411003E2637 /* StoreSection+StoreSectionMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StoreSection+StoreSectionMethods.h"; sourceTree = "<group>"; };
+		F046E9DB18C3C411003E2637 /* StoreSection+StoreSectionMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StoreSection+StoreSectionMethods.m"; sourceTree = "<group>"; };
+		F046E9DD18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConsumerNotes+ConsumerNotesMethods.h"; sourceTree = "<group>"; };
+		F046E9DE18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConsumerNotes+ConsumerNotesMethods.m"; sourceTree = "<group>"; };
+		F046E9E018C3C803003E2637 /* ShoppingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListController.h; sourceTree = "<group>"; };
+		F046E9E118C3C803003E2637 /* ShoppingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListController.m; sourceTree = "<group>"; };
+		F046E9E318C3CC1C003E2637 /* StoreInfoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreInfoDelegate.h; sourceTree = "<group>"; };
+		F046E9E518C3D07C003E2637 /* shoppingStoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shoppingStoreController.h; sourceTree = "<group>"; };
+		F046E9E618C3D07C003E2637 /* shoppingStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shoppingStoreController.m; sourceTree = "<group>"; };
 		F0BD857D18A5BDFB00030690 /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BD858018A5BDFB00030690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0BD858218A5BDFB00030690 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +139,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F046E9E418C3CC28003E2637 /* ShoppingListController */ = {
+			isa = PBXGroup;
+			children = (
+				F046E9E518C3D07C003E2637 /* shoppingStoreController.h */,
+				F046E9E618C3D07C003E2637 /* shoppingStoreController.m */,
+				F046E9E018C3C803003E2637 /* ShoppingListController.h */,
+				F046E9E118C3C803003E2637 /* ShoppingListController.m */,
+				F046E9E318C3CC1C003E2637 /* StoreInfoDelegate.h */,
+			);
+			name = ShoppingListController;
+			sourceTree = "<group>";
+		};
 		F0BD857418A5BDFB00030690 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +192,7 @@
 				F0BD85B918A5BEFF00030690 /* FavoritesVC.m */,
 				F0BD85BA18A5BEFF00030690 /* PlanListVC.h */,
 				F0BD85BB18A5BEFF00030690 /* PlanListVC.m */,
+				F046E9E418C3CC28003E2637 /* ShoppingListController */,
 				F0BD859818A5BDFB00030690 /* Images.xcassets */,
 				F0BD85C618A5BF2500030690 /* Data Classes */,
 				F0BD85DF18A5BFF000030690 /* Shared Code */,
@@ -194,16 +226,24 @@
 				F03A9CF118A6C0AB009F0F60 /* EZGrocs.xcdatamodeld */,
 				F03A9D0618A6C467009F0F60 /* ConsumerNotes.h */,
 				F03A9D0718A6C467009F0F60 /* ConsumerNotes.m */,
+				F046E9DD18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.h */,
+				F046E9DE18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m */,
 				F03A9D0318A6C466009F0F60 /* StoreSection.h */,
 				F03A9D0418A6C466009F0F60 /* StoreSection.m */,
+				F046E9DA18C3C411003E2637 /* StoreSection+StoreSectionMethods.h */,
+				F046E9DB18C3C411003E2637 /* StoreSection+StoreSectionMethods.m */,
 				F03A9D0018A6C466009F0F60 /* ShoppingItemList.h */,
 				F03A9D0118A6C466009F0F60 /* ShoppingItemList.m */,
 				F03A9CFD18A6C466009F0F60 /* ListPortfolio.h */,
 				F03A9CFE18A6C466009F0F60 /* ListPortfolio.m */,
 				F03A9CFA18A6C466009F0F60 /* ProductItem.h */,
 				F03A9CFB18A6C466009F0F60 /* ProductItem.m */,
+				F046E9D718C3C3F5003E2637 /* ProductItem+ProductItemMethods.h */,
+				F046E9D818C3C3F5003E2637 /* ProductItem+ProductItemMethods.m */,
 				F03A9CF718A6C466009F0F60 /* ShoppingItem.h */,
 				F03A9CF818A6C466009F0F60 /* ShoppingItem.m */,
+				F046E9D418C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.h */,
+				F046E9D518C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -335,18 +375,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F046E9DC18C3C411003E2637 /* StoreSection+StoreSectionMethods.m in Sources */,
 				F03A9D0218A6C466009F0F60 /* ShoppingItemList.m in Sources */,
 				F03A9CF918A6C466009F0F60 /* ShoppingItem.m in Sources */,
 				F0BD85DD18A5BFE900030690 /* LabeledSpinnerView.m in Sources */,
 				F03A9D0518A6C466009F0F60 /* StoreSection.m in Sources */,
+				F046E9D618C3C3C6003E2637 /* ShoppingItem+ShoppingItemMethods.m in Sources */,
+				F046E9DF18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m in Sources */,
+				F046E9E218C3C803003E2637 /* ShoppingListController.m in Sources */,
 				F03A9CFC18A6C466009F0F60 /* ProductItem.m in Sources */,
 				F03A9CF318A6C0AB009F0F60 /* EZGrocs.xcdatamodeld in Sources */,
 				F03A9D0818A6C467009F0F60 /* ConsumerNotes.m in Sources */,
 				F0BD85BE18A5BEFF00030690 /* FavoritesVC.m in Sources */,
 				F0BD85BF18A5BEFF00030690 /* PlanListVC.m in Sources */,
+				F046E9D918C3C3F5003E2637 /* ProductItem+ProductItemMethods.m in Sources */,
 				F0BD85D218A5BF7600030690 /* main.m in Sources */,
 				F0BD85BC18A5BEFF00030690 /* EZAppDelegate.m in Sources */,
 				F03A9CFF18A6C466009F0F60 /* ListPortfolio.m in Sources */,
+				F046E9E718C3D07C003E2637 /* shoppingStoreController.m in Sources */,
 				F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

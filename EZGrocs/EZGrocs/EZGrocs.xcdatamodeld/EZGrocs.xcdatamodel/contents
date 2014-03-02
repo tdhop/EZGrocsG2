@@ -32,7 +32,17 @@
         <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sectionSequenceID" optional="YES" attributeType="Integer 16" syncable="YES"/>
     </entity>
-    <configuration name="Configuration"/>
+    <configuration name="RegistryConfig">
+        <memberEntity name="ProductItem"/>
+        <memberEntity name="StoreSection"/>
+    </configuration>
+    <configuration name="UserDataConfig">
+        <memberEntity name="ConsumerNotes"/>
+        <memberEntity name="ListPortfolio"/>
+        <memberEntity name="ShoppingItem"/>
+        <memberEntity name="ShoppingItemList"/>
+        <memberEntity name="ProductItem"/>
+    </configuration>
     <elements>
         <element name="ConsumerNotes" positionX="0" positionY="0" width="0" height="0"/>
         <element name="ListPortfolio" positionX="0" positionY="0" width="0" height="0"/>

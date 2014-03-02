@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "ProductItem.h"
 
 
-@interface ShoppingItem : NSManagedObject
+@interface ShoppingItem : ProductItem
 
 @property (nonatomic, retain) NSNumber * couponFlag;
 @property (nonatomic, retain) NSNumber * quantity;
