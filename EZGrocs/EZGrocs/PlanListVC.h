@@ -1,13 +1,13 @@
 //
 //  PlanListVC.h
-//  EZGrocs
+//  
 //
-//  Created by Mark A Stewart on 1/18/14.
-//  Copyright (c) 2014 EZLifeSoftware.com. All rights reserved.
+//  Created by Mark A Stewart on 1/31/14.
+//
 //
 
-#import "SLShoppingListVC.h"
+#import "ManageShoppingListVC.h"
 
-@interface PlanListVC : SLShoppingListVC
+@interface PlanListVC : ManageShoppingListVC <UITableViewDelegate, UITableViewDataSource>
 
 @end

@@ -43,6 +43,32 @@
 		F0BD85D818A5BFBC00030690 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD85D718A5BFBC00030690 /* CoreData.framework */; };
 		F0BD85DD18A5BFE900030690 /* LabeledSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85DA18A5BFE900030690 /* LabeledSpinnerView.m */; };
 		F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85DC18A5BFE900030690 /* SLShoppingListVC.m */; };
+		568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */; };
+		568CB393189C8AF5006B91F1 /* FavoritesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB392189C8AF5006B91F1 /* FavoritesListVC.m */; };
+		568CB396189C8C4F006B91F1 /* PlanListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB395189C8C4F006B91F1 /* PlanListVC.m */; };
+		56EB94A418B2EB57000DA3C9 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB94A318B2EB57000DA3C9 /* ShoppingListCell.m */; };
+		F010237E17C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
+		F010238017C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
+		F010238217C304450046087B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010238117C304450046087B /* CoreGraphics.framework */; };
+		F010238817C304450046087B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F010238617C304450046087B /* InfoPlist.strings */; };
+		F010238A17C304450046087B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F010238917C304450046087B /* main.m */; };
+		F010238E17C304450046087B /* EZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F010238D17C304450046087B /* EZAppDelegate.m */; };
+		F010239017C304450046087B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F010238F17C304450046087B /* Default.png */; };
+		F010239217C304450046087B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F010239117C304450046087B /* Default@2x.png */; };
+		F010239417C304450046087B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F010239317C304450046087B /* Default-568h@2x.png */; };
+		F010239717C304450046087B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F010239517C304450046087B /* MainStoryboard.storyboard */; };
+		F010239A17C304450046087B /* EZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F010239917C304450046087B /* EZViewController.m */; };
+		F01023A217C304450046087B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01023A117C304450046087B /* SenTestingKit.framework */; };
+		F01023A317C304450046087B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237D17C304450046087B /* UIKit.framework */; };
+		F01023A417C304450046087B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F010237F17C304450046087B /* Foundation.framework */; };
+		F01023AC17C304450046087B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F01023AA17C304450046087B /* InfoPlist.strings */; };
+		F01023AF17C304450046087B /* EZGrocsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01023AE17C304450046087B /* EZGrocsTests.m */; };
+		F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */; };
+		F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */; };
+		F0DABE551851807D0043F2FC /* ezgconverter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE531851807D0043F2FC /* ezgconverter.xcdatamodeld */; };
+		F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE57185180F60043F2FC /* ProductItem.m */; };
+		F0DABE5B185180F60043F2FC /* SectionNames.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE59185180F60043F2FC /* SectionNames.m */; };
+		F0DABE5E185181760043F2FC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0DABE5D185181760043F2FC /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +138,47 @@
 		F0BD85DA18A5BFE900030690 /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledSpinnerView.m; sourceTree = "<group>"; };
 		F0BD85DB18A5BFE900030690 /* SLShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShoppingListVC.h; sourceTree = "<group>"; };
 		F0BD85DC18A5BFE900030690 /* SLShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLShoppingListVC.m; sourceTree = "<group>"; };
+		568CB38B189C89E6006B91F1 /* ManageShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageShoppingListVC.h; sourceTree = "<group>"; };
+		568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageShoppingListVC.m; sourceTree = "<group>"; };
+		568CB391189C8AF5006B91F1 /* FavoritesListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesListVC.h; sourceTree = "<group>"; };
+		568CB392189C8AF5006B91F1 /* FavoritesListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesListVC.m; sourceTree = "<group>"; };
+		568CB394189C8C4F006B91F1 /* PlanListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListVC.h; sourceTree = "<group>"; };
+		568CB395189C8C4F006B91F1 /* PlanListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListVC.m; sourceTree = "<group>"; };
+		56EB94A218B2EB57000DA3C9 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
+		56EB94A318B2EB57000DA3C9 /* ShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListCell.m; sourceTree = "<group>"; };
+		F010237A17C304450046087B /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F010237D17C304450046087B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F010237F17C304450046087B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F010238117C304450046087B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F010238517C304450046087B /* EZGrocs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZGrocs-Info.plist"; sourceTree = "<group>"; };
+		F010238717C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F010238917C304450046087B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F010238B17C304450046087B /* EZGrocs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EZGrocs-Prefix.pch"; sourceTree = "<group>"; };
+		F010238C17C304450046087B /* EZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZAppDelegate.h; sourceTree = "<group>"; };
+		F010238D17C304450046087B /* EZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZAppDelegate.m; sourceTree = "<group>"; };
+		F010238F17C304450046087B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F010239117C304450046087B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F010239317C304450046087B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F010239617C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F010239817C304450046087B /* EZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZViewController.h; sourceTree = "<group>"; };
+		F010239917C304450046087B /* EZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZViewController.m; sourceTree = "<group>"; };
+		F01023A017C304450046087B /* EZGrocsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZGrocsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01023A117C304450046087B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F01023A917C304450046087B /* EZGrocsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EZGrocsTests-Info.plist"; sourceTree = "<group>"; };
+		F01023AB17C304450046087B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F01023AD17C304450046087B /* EZGrocsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EZGrocsTests.h; sourceTree = "<group>"; };
+		F01023AE17C304450046087B /* EZGrocsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZGrocsTests.m; sourceTree = "<group>"; };
+		F0ACD50417CAE93300DAE1C2 /* ShoppingLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShoppingLib.xcodeproj; path = ../../../Frameworks/ShoppingLib/ShoppingLib.xcodeproj; sourceTree = "<group>"; };
+		F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledSpinnerView.h; sourceTree = "<group>"; };
+		F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledSpinnerView.m; sourceTree = "<group>"; };
+		F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShoppingListVC.h; sourceTree = "<group>"; };
+		F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLShoppingListVC.m; sourceTree = "<group>"; };
+		F0DABE541851807D0043F2FC /* ezgconverter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ezgconverter.xcdatamodel; sourceTree = "<group>"; };
+		F0DABE56185180F60043F2FC /* ProductItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductItem.h; path = ../../ezgconverter/ezgconverter/ProductItem.h; sourceTree = "<group>"; };
+		F0DABE57185180F60043F2FC /* ProductItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductItem.m; path = ../../ezgconverter/ezgconverter/ProductItem.m; sourceTree = "<group>"; };
+		F0DABE58185180F60043F2FC /* SectionNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SectionNames.h; path = ../../ezgconverter/ezgconverter/SectionNames.h; sourceTree = "<group>"; };
+		F0DABE59185180F60043F2FC /* SectionNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SectionNames.m; path = ../../ezgconverter/ezgconverter/SectionNames.m; sourceTree = "<group>"; };
+		F0DABE5D185181760043F2FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +245,16 @@
 				F0BD858218A5BDFB00030690 /* CoreGraphics.framework */,
 				F0BD858418A5BDFB00030690 /* UIKit.framework */,
 				F0BD859F18A5BDFB00030690 /* XCTest.framework */,
+				F0DABE5C185181290043F2FC /* Data Files */,
+				F010238C17C304450046087B /* EZAppDelegate.h */,
+				F010238D17C304450046087B /* EZAppDelegate.m */,
+				F010239517C304450046087B /* MainStoryboard.storyboard */,
+				56EB94A218B2EB57000DA3C9 /* ShoppingListCell.h */,
+				56EB94A318B2EB57000DA3C9 /* ShoppingListCell.m */,
+				F010239817C304450046087B /* EZViewController.h */,
+				F010239917C304450046087B /* EZViewController.m */,
+				F0DABE5F1857E89C0043F2FC /* Shared Code */,
+				F010238417C304450046087B /* Supporting Files */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,6 +346,16 @@
 				F0BD85DA18A5BFE900030690 /* LabeledSpinnerView.m */,
 				F0BD85DB18A5BFE900030690 /* SLShoppingListVC.h */,
 				F0BD85DC18A5BFE900030690 /* SLShoppingListVC.m */,
+				568CB394189C8C4F006B91F1 /* PlanListVC.h */,
+				568CB395189C8C4F006B91F1 /* PlanListVC.m */,
+				568CB391189C8AF5006B91F1 /* FavoritesListVC.h */,
+				568CB392189C8AF5006B91F1 /* FavoritesListVC.m */,
+				568CB38B189C89E6006B91F1 /* ManageShoppingListVC.h */,
+				568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */,
+				F0DABE4B18517E940043F2FC /* LabeledSpinnerView.h */,
+				F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */,
+				F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */,
+				F0DABE4E18517E940043F2FC /* SLShoppingListVC.m */,
 			);
 			name = "Shared Code";
 			sourceTree = "<group>";
@@ -394,6 +481,18 @@
 				F03A9CFF18A6C466009F0F60 /* ListPortfolio.m in Sources */,
 				F046E9E718C3D07C003E2637 /* shoppingStoreController.m in Sources */,
 				F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */,
+				F010238A17C304450046087B /* main.m in Sources */,
+				F0DABE551851807D0043F2FC /* ezgconverter.xcdatamodeld in Sources */,
+				F0DABE5B185180F60043F2FC /* SectionNames.m in Sources */,
+				F010238E17C304450046087B /* EZAppDelegate.m in Sources */,
+				568CB393189C8AF5006B91F1 /* FavoritesListVC.m in Sources */,
+				F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */,
+				568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */,
+				568CB396189C8C4F006B91F1 /* PlanListVC.m in Sources */,
+				F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */,
+				56EB94A418B2EB57000DA3C9 /* ShoppingListCell.m in Sources */,
+				F0DABE5018517E940043F2FC /* SLShoppingListVC.m in Sources */,
+				F010239A17C304450046087B /* EZViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

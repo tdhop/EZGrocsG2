@@ -7,7 +7,6 @@
 
 #import "EZAppDelegate.h"
 #import "SLShoppingListVC.h"
-#import "FavoritesVC.h"
 
 @interface EZAppDelegate()
 
@@ -78,7 +77,6 @@
                  NSLog(@"file open success=%d", success);
              }
             [self registryDidOpen];
-             
          }];
     } else NSLog(@"VikingsDB file not found");
     
@@ -98,8 +96,7 @@
                     */
     
     UITabBarController *tabController = self.window.rootViewController;
-    UINavigationController *navController = [[tabController viewControllers] objectAtIndex:0];
-    SLShoppingListVC *slSListVC=navController.topViewController;
+    SLShoppingListVC *slSListVC=[[tabController viewControllers] objectAtIndex:0];
     NSLog(@"AppDelegate: Calling proceed");
     [slSListVC proceed];
 }

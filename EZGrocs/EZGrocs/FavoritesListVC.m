@@ -1,19 +1,19 @@
 //
-//  PlanListVC.m
+//  FavoritesListVC.m
 //  
 //
 //  Created by Mark A Stewart on 1/31/14.
 //
 //
 
-#import "PlanListVC.h"
+#import "FavoritesListVC.h"
 #import "EZAppDelegate.h"
 
-@interface PlanListVC ()
+@interface FavoritesListVC ()
 
 @end
 
-@implementation PlanListVC
+@implementation FavoritesListVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,21 +34,11 @@
     self.shoppingListTable.delegate =  self;
 }
 
-                    // Configure count and coupon icon for table row.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-                    // Get cell for next row in table.
-    
-    UITableViewCell *cell = (UITableViewCell *)[super tableView:tableView cellForRowAtIndexPath:indexPath];
-    
-    return cell;
-}
-
-                    // Invoke super method to implement Edit protocol
-- (IBAction)tapEdit:(UIBarButtonItem *)sender
+- (IBAction)tapEdit:(id)sender
 {
     [super editRow:(UIBarButtonItem *)sender];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
