@@ -10,6 +10,8 @@
 
 @interface ProductItem (ProductItemMethods)
 
-- (NSString *) getSectionName; // Calculated by fetching property sectionInfo and retrieving name
+- (NSString *) sectionName; // Calculated by fetching property sectionInfo and retrieving name
+
+- (int) sectionSequenceID; // Calculated by fetching property sectionInfo and retrieving sectionSequenceID
 
 @end

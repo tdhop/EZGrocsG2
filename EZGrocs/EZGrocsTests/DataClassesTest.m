@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "ProductItem.h"
+#import "ProductItem+ProductItemMethods.h"
 #import "ConsumerNotes.h"
 #import "StoreSection.h"
 #import "ShoppingItem.h"
@@ -17,6 +17,7 @@
 @interface DataClassesTest : XCTestCase
 
 @property NSManagedObjectContext *testMOC;
+@property NSString *testString;
 @property NSNumber *testInteger;
 @property NSNumber *testBool;
 @property NSURL *registryURL;
@@ -52,6 +53,7 @@
         //Set up numbers for test
     self.testInteger = [NSNumber numberWithInt:5];
     self.testBool = [NSNumber numberWithBool:YES];
+    self.testString = @"Test String";
     
 }
 
@@ -60,7 +62,10 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
     self.testMOC=nil;
-    self.testInteger=nil;
+    self.testInteger = nil;
+    self.testBool = nil;
+    self.registryURL = nil;
+    self.userDataURL = nil;
 }
 
 #pragma mark - Convenience Methods
@@ -114,15 +119,24 @@
         //Create a StoreSection so it can be retrieved
     StoreSection *testSection = [self createInstanceOfEntity:@"StoreSection"];
     testSection.sectionID = self.testInteger;
+    testSection.sectionName = self.testString;
+    testSection.sectionSequenceID = self.testInteger;
     
     
         //Test fetched properties
-    NSArray * sections =[testProduct valueForKey:@"sectionInfo"];
+    NSArray *sections =[testProduct valueForKey:@"sectionInfo"];
     XCTAssert([sections count] == 1, @"Product Item did not return proper number of StoreSections from fetched property sectionInfo");
     
     StoreSection *sectionForTestProduct = [sections lastObject];
     XCTAssertNotNil(sectionForTestProduct, @"ProductItem failed to return fetched property 'sectionInfo'");
     
+        //Tear down fetched properties test
+    sections = nil;
+    sectionForTestProduct = nil;
+    
+        //Test calculated getters
+    XCTAssertEqualObjects([testProduct sectionName], self.testString, @"StoreSection for TestProduct did not correctly store string");
+    XCTAssertEqual([testProduct sectionSequenceID], [self.testInteger intValue]);
     
 }
 
