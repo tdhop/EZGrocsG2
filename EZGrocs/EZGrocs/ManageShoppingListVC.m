@@ -72,9 +72,9 @@
     
                     /* Get shopping list item pointed to by indexpath and configure the cell - item name and notes.
                     */
-    ProductItem *product = [self.shoppingListResultsController objectAtIndexPath:indexPath];
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-    nameLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@", product.itemName, product.sectionName, product.sectionIndex];
+    // ProductItem *product = [self.shoppingListResultsController objectAtIndexPath:indexPath];
+    // UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+    // nameLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@", product.itemName, product.sectionName, product.sectionIndex];
     UILabel *notesLabel = (UILabel *)[cell viewWithTag:2];
     notesLabel.text = @"3 jars of each";
     

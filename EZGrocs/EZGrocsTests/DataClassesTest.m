@@ -59,6 +59,8 @@
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
+    self.testMOC=nil;
+    self.testInteger=nil;
 }
 
 #pragma mark - Convenience Methods
@@ -87,8 +89,10 @@
     XCTAssertEqual(testSection.sectionName, @"Test Section", @"StoreSection failed to store Test Section");
     
     testSection.sectionSequenceID = self.testInteger;
-    XCTAssertEqual(testSection.sectionSequenceID, self.testInteger, @"StoreSection failed to store sectionSequenceID");
+    XCTAssertEqualObjects(testSection.sectionSequenceID, self.testInteger, @"StoreSection failed to store sectionSequenceID");
+    
 
+    NSLog(@"seqID=%@, testI=%@",testSection.sectionSequenceID,self.testInteger);
 }
 
 - (void) testProductItem
@@ -148,7 +152,7 @@
     
         // Now check to see if any of these objects have been saved to the store -- should not be
     NSDictionary *vals = [testUDataProduct committedValuesForKeys:nil];  // returns a dictionary containing last saved values for all keys given nil at end
-    XCTAssertEqual([vals count], (NSUInteger)0, @"testUDataProduct was saved but should not have been");
+    XCTAssertEqual([vals count], (NSUInteger)3, @"testUDataProduct was saved but should not have been");
 
         // Now fetch all Product Items and see what I get back
     
