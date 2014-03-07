@@ -7,7 +7,6 @@
 //
 
 #import "PlanListVC.h"
-#import "EZAppDelegate.h"
 
 @interface PlanListVC ()
 

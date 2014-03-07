@@ -7,7 +7,6 @@
 //
 
 #import "FavoritesListVC.h"
-#import "EZAppDelegate.h"
 
 @interface FavoritesListVC ()
 
