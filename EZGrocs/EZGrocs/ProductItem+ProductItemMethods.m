@@ -7,7 +7,23 @@
 //
 
 #import "ProductItem+ProductItemMethods.h"
+#import "StoreSection.h"
 
 @implementation ProductItem (ProductItemMethods)
+
+- (NSString *) sectionName {
+    
+    StoreSection *mySection = [self.sectionInfo lastObject];
+    
+    return mySection.sectionName;
+}
+
+
+- (int) sectionSequenceID {
+    
+    StoreSection *mySection = [self.sectionInfo lastObject];
+    
+    return [mySection.sectionSequenceID intValue];
+}
 
 @end

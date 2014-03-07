@@ -25,7 +25,7 @@
 		F046E9DC18C3C411003E2637 /* StoreSection+StoreSectionMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9DB18C3C411003E2637 /* StoreSection+StoreSectionMethods.m */; };
 		F046E9DF18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9DE18C3C43E003E2637 /* ConsumerNotes+ConsumerNotesMethods.m */; };
 		F046E9E218C3C803003E2637 /* ShoppingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9E118C3C803003E2637 /* ShoppingListController.m */; };
-		F046E9E718C3D07C003E2637 /* shoppingStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = F046E9E618C3D07C003E2637 /* shoppingStoreController.m */; };
+		F066B2CA18C9609E00C54C67 /* ShoppingStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = F066B2C918C9609E00C54C67 /* ShoppingStoreController.m */; };
 		F0BD858118A5BDFB00030690 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858018A5BDFB00030690 /* Foundation.framework */; };
 		F0BD858318A5BDFB00030690 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858218A5BDFB00030690 /* CoreGraphics.framework */; };
 		F0BD858518A5BDFB00030690 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0BD858418A5BDFB00030690 /* UIKit.framework */; };
@@ -46,7 +46,7 @@
 		F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F0BD85DC18A5BFE900030690 /* SLShoppingListVC.m */; };
 		F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */; };
 		F0DABE551851807D0043F2FC /* (null) in Sources */ = {isa = PBXBuildFile; };
-		F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DABE57185180F60043F2FC /* ProductItem.m */; };
+		F0DABE5A185180F60043F2FC /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,8 @@
 		F046E9E018C3C803003E2637 /* ShoppingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListController.h; sourceTree = "<group>"; };
 		F046E9E118C3C803003E2637 /* ShoppingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListController.m; sourceTree = "<group>"; };
 		F046E9E318C3CC1C003E2637 /* StoreInfoDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreInfoDelegate.h; sourceTree = "<group>"; };
-		F046E9E518C3D07C003E2637 /* shoppingStoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shoppingStoreController.h; sourceTree = "<group>"; };
-		F046E9E618C3D07C003E2637 /* shoppingStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shoppingStoreController.m; sourceTree = "<group>"; };
+		F066B2C818C9609E00C54C67 /* ShoppingStoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingStoreController.h; sourceTree = "<group>"; };
+		F066B2C918C9609E00C54C67 /* ShoppingStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingStoreController.m; sourceTree = "<group>"; };
 		F0BD857D18A5BDFB00030690 /* EZGrocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZGrocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BD858018A5BDFB00030690 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0BD858218A5BDFB00030690 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,8 +150,8 @@
 		F046E9E418C3CC28003E2637 /* ShoppingListController */ = {
 			isa = PBXGroup;
 			children = (
-				F046E9E518C3D07C003E2637 /* shoppingStoreController.h */,
-				F046E9E618C3D07C003E2637 /* shoppingStoreController.m */,
+				F066B2C818C9609E00C54C67 /* ShoppingStoreController.h */,
+				F066B2C918C9609E00C54C67 /* ShoppingStoreController.m */,
 				F046E9E018C3C803003E2637 /* ShoppingListController.h */,
 				F046E9E118C3C803003E2637 /* ShoppingListController.m */,
 				F046E9E318C3CC1C003E2637 /* StoreInfoDelegate.h */,
@@ -401,15 +401,15 @@
 				F046E9D918C3C3F5003E2637 /* ProductItem+ProductItemMethods.m in Sources */,
 				F0BD85D218A5BF7600030690 /* main.m in Sources */,
 				F0BD85BC18A5BEFF00030690 /* EZAppDelegate.m in Sources */,
+				F066B2CA18C9609E00C54C67 /* ShoppingStoreController.m in Sources */,
 				F03A9CFF18A6C466009F0F60 /* ListPortfolio.m in Sources */,
-				F046E9E718C3D07C003E2637 /* shoppingStoreController.m in Sources */,
 				F0BD85DE18A5BFE900030690 /* SLShoppingListVC.m in Sources */,
 				56EB94B618C6AA72000DA3C9 /* FavoritesListVC.m in Sources */,
 				F0DABE551851807D0043F2FC /* (null) in Sources */,
 				F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */,
 				568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */,
 				56EB94B318C578E5000DA3C9 /* ShoppingListCell.m in Sources */,
-				F0DABE5A185180F60043F2FC /* ProductItem.m in Sources */,
+				F0DABE5A185180F60043F2FC /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
