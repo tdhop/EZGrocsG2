@@ -7,6 +7,7 @@
 //
 
 #import "PlanListVC.h"
+#import "AddFromListVC.h"
 
 @interface PlanListVC ()
 
@@ -42,11 +43,20 @@
     
     return cell;
 }
-
-                    // Invoke super method to implement Edit protocol
-- (IBAction)tapEdit:(UIBarButtonItem *)sender
+- (IBAction)tapEdit:(id)sender
 {
     [super editRow:(UIBarButtonItem *)sender];
+}
+
+- (IBAction)tapAdd:(id)sender
+{
+    [self performSegueWithIdentifier:@"AddItemToPlanList" sender:self];
+}
+                    // Prepare for segue to Add
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddFromListVC *addFromListVC=segue.destinationViewController;
+    [addFromListVC initForSegue:self workingList:SHOPPING_LIST];
 }
 
 - (void)didReceiveMemoryWarning

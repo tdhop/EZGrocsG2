@@ -7,6 +7,7 @@
 //
 
 #import "FavoritesListVC.h"
+#import "AddFromListVC.h"
 
 @interface FavoritesListVC ()
 
@@ -35,9 +36,20 @@
 
 - (IBAction)tapEdit:(id)sender
 {
-    [super editRow:(UIBarButtonItem *)sender];
+    [self editRow:(UIBarButtonItem *)sender];
 }
 
+- (IBAction)tapAdd:(id)sender
+{
+    [self performSegueWithIdentifier:@"AddItemToFavoriteList" sender:self];
+}
+
+                    // Prepare for segue to Add
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AddFromListVC *addFromListVC=segue.destinationViewController;
+    [addFromListVC initForSegue:self workingList:FAVORITES_LIST];
+}
 
 - (void)didReceiveMemoryWarning
 {

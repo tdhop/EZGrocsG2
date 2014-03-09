@@ -158,15 +158,14 @@
     }
     
         // Now create FRC with Fetch Request
-    self.shoppingListResultsController = [[NSFetchedResultsController alloc]
+    /* mas self.shoppingListResultsController = [[NSFetchedResultsController alloc]
                                           initWithFetchRequest:fetchRequest
                                           managedObjectContext:self.productTableContext
                                           sectionNameKeyPath:@"sectionIndex"
-                                          cacheName:self.cacheName];
+                                          cacheName:self.cacheName]; */
     
-        // TEST CODE
-    [self.shoppingListResultsController performFetch:nil];
-        // END TEST CODE
+    // mas [self.shoppingListResultsController performFetch:nil];
+    NSLog(@"Hacks in SLShoppingListVC with mas comments need to be removed/changed");
     
         // Now that everything is ready to go, set data source and tell the tableview to reload
     self.shoppingListTable.dataSource = self;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		567F3AB818CCEA9A00075662 /* AddFromListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 567F3AB718CCEA9A00075662 /* AddFromListVC.m */; };
 		568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */; };
 		56EB94B318C578E5000DA3C9 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB94B218C578E5000DA3C9 /* ShoppingListCell.m */; };
 		56EB94B618C6AA72000DA3C9 /* FavoritesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB94B518C6AA72000DA3C9 /* FavoritesListVC.m */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		567F3AB618CCEA9A00075662 /* AddFromListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFromListVC.h; path = ../AddFromListVC.h; sourceTree = "<group>"; };
+		567F3AB718CCEA9A00075662 /* AddFromListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFromListVC.m; path = ../AddFromListVC.m; sourceTree = "<group>"; };
 		568CB38B189C89E6006B91F1 /* ManageShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageShoppingListVC.h; sourceTree = "<group>"; };
 		568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageShoppingListVC.m; sourceTree = "<group>"; };
 		56EB94B118C578D6000DA3C9 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
@@ -194,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				F03A9CC218A6688F009F0F60 /* MainStoryboard.storyboard */,
+				567F3AB618CCEA9A00075662 /* AddFromListVC.h */,
+				567F3AB718CCEA9A00075662 /* AddFromListVC.m */,
 				F0BD85B518A5BEFF00030690 /* EZAppDelegate.h */,
 				F0BD85B618A5BEFF00030690 /* EZAppDelegate.m */,
 				F0BD85BA18A5BEFF00030690 /* PlanListVC.h */,
@@ -407,6 +412,7 @@
 				56EB94B618C6AA72000DA3C9 /* FavoritesListVC.m in Sources */,
 				F0DABE551851807D0043F2FC /* (null) in Sources */,
 				F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */,
+				567F3AB818CCEA9A00075662 /* AddFromListVC.m in Sources */,
 				568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */,
 				56EB94B318C578E5000DA3C9 /* ShoppingListCell.m in Sources */,
 				F0DABE5A185180F60043F2FC /* (null) in Sources */,

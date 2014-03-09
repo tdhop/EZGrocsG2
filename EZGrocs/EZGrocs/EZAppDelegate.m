@@ -21,13 +21,6 @@
 {
     // Override point for customization after application launch.
     
-        // The following is a dummy call to force the linker to load this particular class from my library.  Would not happen on its own because this class is only referenced through the class identifier in storyboard.  Linker does not 'see' that.
-    //MAS [SLShoppingListVC class];  // Probably no longer necessary given some of the code below
-    
-        // Tell the ShoppingListVC that it should wait for proceed message given that we need to spend some time opening the database
-    // mas SLShoppingListVC *slShoppingListVC = (SLShoppingListVC *)self.window.rootViewController;
-    // mas slShoppingListVC.shouldWaitForProceedMessage = YES;
-    
     
         // COPY THE PRODUCT REGISTRY SOURCE TO THE SANDBOX AND OPEN IT.  Using the name Vikings for the database just for fun.  Since this is a test app, it doesn't matter.
     
@@ -36,7 +29,7 @@
      is in location 0 of the array (or "lastObject")
      */
     
-    NSArray *tempURLs = [[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask];
+    /* mas-3-8*/ NSArray *tempURLs = [[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask];
     NSURL *documentsURL = [tempURLs lastObject];
     
         // Change working directory to Documents and create "Vikings/StoreContent" directory in run-time environment.
@@ -49,7 +42,7 @@
     
     /* Copy persistentStore into new directory from bundle. First build URL for file to be copied from bundle then build URL for file destination in Documents then copy file.
      */
-    NSURL *copyFromURL = [[NSBundle mainBundle] resourceURL];
+    /* mas 3/8*/ NSURL *copyFromURL = [[NSBundle mainBundle] resourceURL];
     copyFromURL = [copyFromURL URLByAppendingPathComponent:@"ProductRegistrySource"];
     NSLog(@"dbfile=%@", copyFromURL);
     NSURL *vikingsDestinationURL = [documentsURL URLByAppendingPathComponent:@"VikingsDB"];
@@ -78,7 +71,10 @@
              }
             [self registryDidOpen];
          }];
-    } else NSLog(@"VikingsDB file not found");
+    } else
+    {
+        NSLog(@"VikingsDB was not opened");
+    }
     
     return YES;
 }
@@ -95,10 +91,9 @@
                        method since VC is waiting for the notification.
                     */
     
-    UITabBarController *tabController = self.window.rootViewController;
+    /* UITabBarController *tabController = self.window.rootViewController;
     SLShoppingListVC *slSListVC=[[tabController viewControllers] objectAtIndex:0];
-    NSLog(@"AppDelegate: Calling proceed");
-    [slSListVC proceed];
+    [slSListVC proceed];*/
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

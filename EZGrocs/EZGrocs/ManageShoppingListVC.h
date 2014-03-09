@@ -14,4 +14,10 @@
 
 - (void) editRow: (UIBarButtonItem *) sender;
 
+@property(nonatomic, assign) int listName;
+
+                    // Used to determine list user is currently working on.
+#define SHOPPING_LIST   1
+#define FAVORITES_LIST  2
+
 @end
