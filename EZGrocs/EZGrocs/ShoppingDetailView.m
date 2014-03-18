@@ -45,7 +45,7 @@
     separator2.backgroundColor = [UIColor blackColor];
     [self addSubview:separator2];
     
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(10,120,100,25)];
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(10,250,100,25)];
     [button2 setTitle:@"Cancel" forState:UIControlStateNormal];
     [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button2 setBackgroundColor:[UIColor blueColor]];

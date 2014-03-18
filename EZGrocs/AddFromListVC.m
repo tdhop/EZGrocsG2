@@ -99,14 +99,14 @@
     NSNumber *sectionNum = [NSNumber numberWithInt:1];
     NSLog(@"shopitem=%@, %@",itemName,sectionNum);
     // init somewhere offscreen, in direction should appear from
-    self.detailView=[[ShoppingDetailView alloc]initWithFrame:CGRectMake(0, -240, 320, 200)];
+    self.detailView=[[ShoppingDetailView alloc]initWithFrame:CGRectMake(0, -240, 320, 280)];
     [self.detailView setUpView:itemName sectId:sectionNum];
     [self.detailView setDelegate:self];
     [self.view addSubview:self.detailView];
     
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:1.5];
-    self.detailView.frame=CGRectMake(0,0, 320, 200);
+    self.detailView.frame=CGRectMake(0,0, 320, 280);
     [UIView commitAnimations];
     NSLog(@"animated detail view");
 }
