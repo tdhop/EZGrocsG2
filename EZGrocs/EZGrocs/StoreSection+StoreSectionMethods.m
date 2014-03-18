@@ -10,4 +10,13 @@
 
 @implementation StoreSection (StoreSectionMethods)
 
++ (NSArray *) getStoreSectionsFrom: (NSManagedObjectContext *) managedObjectContext;
+{
+    NSFetchRequest *fetchSections = [NSFetchRequest fetchRequestWithEntityName:@"StoreSection"];
+    
+    NSArray *storeSections = [managedObjectContext executeFetchRequest:fetchSections error:nil];
+    
+    return storeSections;
+}
+
 @end

@@ -8,10 +8,11 @@
 
 #import <XCTest/XCTest.h>
 #import "ProductItem+ProductItemMethods.h"
-#import "ConsumerNotes.h"
-#import "StoreSection.h"
 #import "ShoppingItem.h"
+#import "ConsumerNotes.h"
+#import "StoreSection+StoreSectionMethods.h"
 #import "ShoppingItemList.h"
+#import "ConsumerNotes+ConsumerNotesMethods.h"
 #import "ListPortfolio.h"
 
 @interface DataClassesTest : XCTestCase
@@ -20,6 +21,7 @@
 @property NSString *testString;
 @property NSNumber *testInteger;
 @property NSNumber *testBool;
+@property NSString *testNoteString;
 @property NSURL *registryURL;
 @property NSURL *userDataURL;
 
@@ -54,6 +56,7 @@
     self.testInteger = [NSNumber numberWithInt:5];
     self.testBool = [NSNumber numberWithBool:YES];
     self.testString = @"Test String";
+    self.testNoteString = @"This is a Consumer Note";
     
 }
 
@@ -96,8 +99,18 @@
     testSection.sectionSequenceID = self.testInteger;
     XCTAssertEqualObjects(testSection.sectionSequenceID, self.testInteger, @"StoreSection failed to store sectionSequenceID");
     
+        //Test convenience method to retrieve all store sections
+        //First, test to see that just one comes back
+    NSArray *storeSections = [StoreSection getStoreSectionsFrom:self.testMOC];
+    XCTAssertEqual([storeSections count], 1, @"Attempt to get all store sections returned the wrong number of results");
 
-    NSLog(@"seqID=%@, testI=%@",testSection.sectionSequenceID,self.testInteger);
+        // Now put a second section in the DB
+    StoreSection *testSection2 = [self createInstanceOfEntity:@"StoreSection"];
+    testSection2.sectionName = @"Second Test Section";
+        //Now retrieve all sections
+    storeSections = [StoreSection getStoreSectionsFrom:self.testMOC];
+    XCTAssertEqual([storeSections count], 2, @"Attempt to get all store sections returned the wrong number of results");
+
 }
 
 - (void) testProductItem
@@ -137,6 +150,57 @@
         //Test calculated getters
     XCTAssertEqualObjects([testProduct sectionName], self.testString, @"StoreSection for TestProduct did not correctly store string");
     XCTAssertEqual([testProduct sectionSequenceID], [self.testInteger intValue]);
+    
+}
+
+- (void) testConsumerNotes
+{
+    /* Test these two methods:
+     - (NSString *) getTruncated: (int) lengthInChars;
+     
+     - (NSString *) getTruncatedWithEllipsis: (int) lengthInChars; // Will return notes truncated to lengthInChars-3 with appended "..."
+     */
+    
+        // Get a ConsumerNotes instance
+    ConsumerNotes *testNotes = [self createInstanceOfEntity:@"ConsumerNotes"];
+    
+        // Put a test string into it
+    testNotes.text = @"This is a string with 41 characters in it";
+    
+        // Now get a truncated version 35 characters -- should read "This is a string with 41 characters"
+    NSString *truncatedText = [testNotes getTruncated:35];
+    XCTAssertEqualObjects(truncatedText, @"This is a string with 41 characters", @"getTruncated did not return the correct string");
+    
+        // Now get a truncated version with ellipsis and 38 characters -- should read "This is a string with 41 characters..."
+    truncatedText = [testNotes getTruncatedWithEllipsis:38];
+    XCTAssertEqualObjects(truncatedText, @"This is a string with 41 characters...", @"getTruncatedWithEllipsis did not return the correct string");
+
+}
+
+- (void) testShoppingItem
+{
+        // Set up item for test
+    ShoppingItem *testShoppingItem = [self createInstanceOfEntity:@"ShoppingItem"];
+    
+        // Make sure that inheritance is working (duh).  If one property works, they'll all work
+    testShoppingItem.itemName = @"testName";
+    XCTAssertEqualObjects(testShoppingItem.itemName, @"testName", @"ShoppingItem failed to store itemName");
+    
+        // Test added attributes
+    testShoppingItem.couponFlag = self.testBool;
+    XCTAssertEqualObjects(testShoppingItem.couponFlag, self.testBool, @"ShoppingItem failed to store couponFlag");
+    
+    testShoppingItem.quantity = self.testInteger;
+    XCTAssertEqualObjects(testShoppingItem.quantity, self.testInteger, @"ShoppingItem failed to store quantity");
+    
+        // Create ConsumerNotes object so I can test the 'notes' attribute
+    ConsumerNotes *tempNotes = [self createInstanceOfEntity:@"ConsumerNotes"];
+    tempNotes.text = self.testNoteString;
+    testShoppingItem.notes = tempNotes;
+    
+    XCTAssertEqualObjects([(ConsumerNotes *)[testShoppingItem notes] text], self.testNoteString, @"ShoppingItem failed to connect to ConsumerNotes and store text");
+    
+        // NOTE THAT OWNINGLIST IS NOT TESTED HERE!!!
     
 }
 

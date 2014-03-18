@@ -7,7 +7,6 @@
 //
 
 #import "ConsumerNotes.h"
-#define AUTO_TRUNCATE_CHARS 100
 
 @interface ConsumerNotes (ConsumerNotesMethods)
 

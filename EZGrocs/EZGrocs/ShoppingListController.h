@@ -18,6 +18,9 @@
     // Initialize new ShoppingListController
 - (ShoppingListController *) initWithList: (ShoppingItemList *) newShoppingList andStoreInfoDelegate: (id <StoreInfoDelegate>) storeInfoDelegate;
 
+    // Create new item and stage it for add
+- (ShoppingItem *) stageNewItemForAdd;
+
     // Stage existing item for add
 - (ShoppingItem *) stageItemForAdd: (ShoppingItem *) item;
 
