@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		567F3AB818CCEA9A00075662 /* AddFromListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 567F3AB718CCEA9A00075662 /* AddFromListVC.m */; };
 		568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */; };
+		569C7AA018CD3BF3003F3A1C /* ShoppingDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 569C7A9F18CD3BF3003F3A1C /* ShoppingDetailView.m */; };
 		56EB94B318C578E5000DA3C9 /* ShoppingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB94B218C578E5000DA3C9 /* ShoppingListCell.m */; };
 		56EB94B618C6AA72000DA3C9 /* FavoritesListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EB94B518C6AA72000DA3C9 /* FavoritesListVC.m */; };
 		F03A9CC118A66457009F0F60 /* DataClassesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F03A9CC018A66457009F0F60 /* DataClassesTest.m */; };
@@ -65,6 +66,8 @@
 		567F3AB718CCEA9A00075662 /* AddFromListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFromListVC.m; path = ../AddFromListVC.m; sourceTree = "<group>"; };
 		568CB38B189C89E6006B91F1 /* ManageShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageShoppingListVC.h; sourceTree = "<group>"; };
 		568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageShoppingListVC.m; sourceTree = "<group>"; };
+		569C7A9E18CD3BF3003F3A1C /* ShoppingDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingDetailView.h; sourceTree = "<group>"; };
+		569C7A9F18CD3BF3003F3A1C /* ShoppingDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingDetailView.m; sourceTree = "<group>"; };
 		56EB94B118C578D6000DA3C9 /* ShoppingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingListCell.h; sourceTree = "<group>"; };
 		56EB94B218C578E5000DA3C9 /* ShoppingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingListCell.m; sourceTree = "<group>"; };
 		56EB94B418C6AA61000DA3C9 /* FavoritesListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesListVC.h; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				F03A9CC218A6688F009F0F60 /* MainStoryboard.storyboard */,
 				567F3AB618CCEA9A00075662 /* AddFromListVC.h */,
 				567F3AB718CCEA9A00075662 /* AddFromListVC.m */,
+				569C7A9E18CD3BF3003F3A1C /* ShoppingDetailView.h */,
+				569C7A9F18CD3BF3003F3A1C /* ShoppingDetailView.m */,
 				F0BD85B518A5BEFF00030690 /* EZAppDelegate.h */,
 				F0BD85B618A5BEFF00030690 /* EZAppDelegate.m */,
 				F0BD85BA18A5BEFF00030690 /* PlanListVC.h */,
@@ -414,6 +419,7 @@
 				F0DABE4F18517E940043F2FC /* LabeledSpinnerView.m in Sources */,
 				567F3AB818CCEA9A00075662 /* AddFromListVC.m in Sources */,
 				568CB38D189C89E6006B91F1 /* ManageShoppingListVC.m in Sources */,
+				569C7AA018CD3BF3003F3A1C /* ShoppingDetailView.m in Sources */,
 				56EB94B318C578E5000DA3C9 /* ShoppingListCell.m in Sources */,
 				F0DABE5A185180F60043F2FC /* (null) in Sources */,
 			);

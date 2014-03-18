@@ -7,6 +7,7 @@
 //
 
 #import "AddFromListVC.h"
+#import "ShoppingDetailView.h"
 
 @interface AddFromListVC ()
 
@@ -48,6 +49,11 @@
         NSLog(@"AddFromListVC: working list is Favorites List");
     }
 }
+    
+-(void) callBackFromSubView
+{
+        NSLog(@"Main view updateFromSubview called");
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -84,6 +90,25 @@
     {
         NSLog(@"Search picker");
     }
+}
+
+- (IBAction)tapSelectRow:(id)sender
+{
+    // MAS temp
+    NSString *itemName = @"Lettuce";
+    NSNumber *sectionNum = [NSNumber numberWithInt:1];
+    NSLog(@"shopitem=%@, %@",itemName,sectionNum);
+    // init somewhere offscreen, in direction should appear from
+    self.detailView=[[ShoppingDetailView alloc]initWithFrame:CGRectMake(0, -240, 320, 200)];
+    [self.detailView setUpView:itemName sectId:sectionNum];
+    [self.detailView setDelegate:self];
+    [self.view addSubview:self.detailView];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1.5];
+    self.detailView.frame=CGRectMake(0,0, 320, 200);
+    [UIView commitAnimations];
+    NSLog(@"animated detail view");
 }
 
 - (void)didReceiveMemoryWarning

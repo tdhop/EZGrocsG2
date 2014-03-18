@@ -8,10 +8,13 @@
 
 #import "SLShoppingListVC.h"
 #import "ManageShoppingListVC.h"
+#import "ShoppingDetailView.h"
 
 @interface AddFromListVC : SLShoppingListVC
 
 - (void) initForSegue: (id) upstreamController
         workingList: (int) listId;
+
+@property (strong,nonatomic) ShoppingDetailView *detailView;
 
 @end
