@@ -7,10 +7,13 @@
 //
 
 #import "ManageShoppingListVC.h"
-#import "EZAppDelegate.h"
+#import "ShoppingStoreController.h"
 #import "ProductItem.h"
 
 @interface ManageShoppingListVC ()
+
+@property (strong, atomic) ShoppingStoreController *shoppingStoreCtrl;
+
 @end
 
 @implementation ManageShoppingListVC
@@ -26,43 +29,35 @@
 
 - (void)viewDidLoad
 {
-                    /* Get Managed Obj Context property from AppDelegate and set
-                       property in SLShoppingListVC class.
-                     */
-    
-    EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
-    self.productTableContext=myAppDelegate.productRegistryContext;
-    
-                    /* If no Object Context, app delegate not finished loading, so
-                       wait. If loading finished and were waiting, cancel wait.
+                    /* If no Object Context, get a Managed Obj Context, set property for SLShoppingListVC class and proceed with table initialization.
                     */
-    
     if (self.productTableContext == 0)
     {
-        self.shouldWaitForProceedMessage=TRUE;
+        ShoppingStoreController *shoppingStoreCtrl = [[ShoppingStoreController alloc] init];
+        self.productTableContext=shoppingStoreCtrl.storeInfoMOC;
+        if (self.productTableContext != 0)
+        {
+            self.shouldWaitForProceedMessage=FALSE;
+            [self proceed];
+        }
+        else
+        {
+            // mas self.shouldWaitForProceedMessage=TRUE;
+                    /* Temp hack so unintialized MOC doesn't suspend app*/
+            self.shouldWaitForProceedMessage=FALSE;
+            NSLog(@"Hack in ManageShoppingListVC with mas comment needs to be removed");
+        }
     }
     else if (self.shouldWaitForProceedMessage)
     {
         self.shouldWaitForProceedMessage=FALSE;
     }
-                    /* Perform previous steps before calling super ViewDidLoad
-                       otherwise super ViewDidLoad will conclude should proceed
-                       prematurely since shouldWaitForProceedMessage property 
-                       will default to FALSE.
+                    /* Perform previous steps before invoking super ViewDidLoad
+                       otherwise super ViewDidLoad concludes should proceed
+                       prematurely as shouldWaitForProceedMessage property
+                       defaults to FALSE.
                      */
     [super viewDidLoad];
-}
-
-                    /* Method invoked from appDelegate when ObjectContext is loaded.
-                       Set object context property (defined in SLShoppingList) and
-                       invoke proceed in super to begin fetch and list initialization.
-                    */
-- (void) proceed
-{
-    EZAppDelegate *myAppDelegate = [[UIApplication sharedApplication] delegate];
-    self.productTableContext=myAppDelegate.productRegistryContext;
-    
-    [super proceed];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,7 +75,6 @@
     
     return cell;
 }
-
                     // Support Delete for Edit style
 - (void)editRow:(UIBarButtonItem *)sender
 {

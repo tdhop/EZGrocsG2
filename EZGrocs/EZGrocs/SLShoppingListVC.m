@@ -40,19 +40,6 @@
 }
 
 
-
-/* - (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self)
-    {
-        // Custom initialization
-        
-    }
-    return self;
-} */
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -93,19 +80,12 @@
     headerLabel.font = [UIFont fontWithName:@"TimesNewRomanPSMT" size:(CGFloat)15];
     [uiSection addSubview:headerLabel];
     return uiSection;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return (28.0);
 } */
 
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {    id <NSFetchedResultsSectionInfo> sectionInfo=[[self.shoppingListResultsController sections] objectAtIndex:section];
     return (sectionInfo.name);
 }
-
-
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -178,15 +158,14 @@
     }
     
         // Now create FRC with Fetch Request
-    self.shoppingListResultsController = [[NSFetchedResultsController alloc]
+    /* mas self.shoppingListResultsController = [[NSFetchedResultsController alloc]
                                           initWithFetchRequest:fetchRequest
                                           managedObjectContext:self.productTableContext
                                           sectionNameKeyPath:@"sectionIndex"
-                                          cacheName:self.cacheName];
+                                          cacheName:self.cacheName]; */
     
-        // TEST CODE
-    [self.shoppingListResultsController performFetch:nil];
-        // END TEST CODE
+    // mas [self.shoppingListResultsController performFetch:nil];
+    NSLog(@"Hacks in SLShoppingListVC with mas comments need to be removed/changed");
     
         // Now that everything is ready to go, set data source and tell the tableview to reload
     self.shoppingListTable.dataSource = self;
