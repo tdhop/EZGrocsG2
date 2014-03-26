@@ -14,7 +14,6 @@
 
 - (NSString *) sectionName; // Calculated by fetching property sectionInfo and retrieving name
 
-- (void) setSectionName; // Fetches
 
 - (int) sectionSequenceID; // Calculated by fetching property sectionInfo and retrieving sectionSequenceID
 

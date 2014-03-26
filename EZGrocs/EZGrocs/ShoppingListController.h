@@ -19,13 +19,13 @@
 - (ShoppingListController *) initWithList: (ShoppingItemList *) newShoppingList andStoreInfoDelegate: (id <StoreInfoDelegate>) storeInfoDelegate;
 
     // Create new item and stage it for add
-- (ShoppingItem *) stageNewItemForAdd;
+- (ShoppingItem *) stageNewItemForAdd; // Note that none of the attributes are defined but the item does have a blank ConsumerNotes object
 
-    // Stage existing item for add
-- (ShoppingItem *) stageItemForAdd: (ShoppingItem *) item;
-
-    // Stage new new item for add
-- (ShoppingItem *) stageNewUserDefinedItem; // Note that none of the attributes are defined but the item does have a blank ConsumerNotes object
+    // Stage existing item for add. Existing item may be a ProductItem (came from Registry) or a ShoppingItem (came from Favorites list or Shopping list)
+    // Note that staging involves creating a new ShoppingItem then copying appropriate attributes depending on scenario as follows:
+    // 1. If item is a ProductItem, copy all attributes,
+    // 2. If item is a ShoppingItem, copy all ProductItem attributes and copy notes but clear quantity, couponFlag, and set owningList to current list.
+- (ShoppingItem *) stageItemForAdd: (ProductItem *) item;
 
     // Save item to persistent store
 - (void) commitAddForItem: (ShoppingItem *) stagedItem; // Note that the staged item AND any other unsaved changes will be committed!!!

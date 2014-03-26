@@ -42,6 +42,8 @@
         // Create bogus URLs for Registry and UserData
     self.registryURL = [NSURL URLWithString:@"file://inMemReg"];
     self.userDataURL = [NSURL URLWithString:@"file://inMemUData"];
+    
+    
         // Add in-memory store that will be used in tests as the Registry store -- Uses bogus URL: self.registryURL
     XCTAssertTrue([psc addPersistentStoreWithType:NSInMemoryStoreType configuration:@"RegistryConfig" URL:self.registryURL options:nil error:NULL] ? YES : NO, @"Should be able to add in-memory store");
         // Add in-memory store that will be used in tests as the UserData store -- Uses bogus URL: self.userDataURL
@@ -113,11 +115,12 @@
 
 }
 
-- (void) testProductItem
+- (void) testProductItem // see testFetch for example of how to assign productItems to the correct persistent store.
 {
         //Set up ProductItem for test
         //ProductItem *testProduct = [NSEntityDescription insertNewObjectForEntityForName:@"ProductItem" inManagedObjectContext:self.testMOC];
     ProductItem *testProduct = [self createInstanceOfEntity:@"ProductItem"];
+    
     
         //Test properties
     testProduct.itemName = @"testName";
