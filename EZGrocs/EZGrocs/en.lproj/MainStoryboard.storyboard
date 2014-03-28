@@ -426,16 +426,16 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-cX-Ppa">
-                                <rect key="frame" x="-6" y="88" width="326" height="483"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="49" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-cX-Ppa">
+                                <rect key="frame" x="-3" y="88" width="326" height="454"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="326" id="HiN-kq-our"/>
-                                    <constraint firstAttribute="height" constant="483" id="YMX-uR-Pv2"/>
+                                    <constraint firstAttribute="height" constant="454" id="7g2-Tw-d6b"/>
+                                    <constraint firstAttribute="width" constant="326" id="CLE-OC-HUx"/>
                                 </constraints>
-                                <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="tEj-Wg-YZZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="326" height="45"/>
+                                <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="tEj-Wg-YZZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="326" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <segments>
                                         <segment title="Favorites"/>
@@ -447,21 +447,21 @@
                                     </connections>
                                 </segmentedControl>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" id="t7k-13-FZL" customClass="ShoppingListCell">
-                                        <rect key="frame" x="0.0" y="81" width="326" height="45"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="49" id="t7k-13-FZL" customClass="ShoppingListCell">
+                                        <rect key="frame" x="0.0" y="67" width="326" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="286" height="43"/>
+                                            <rect key="frame" x="10" y="1" width="286" height="48"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgm-Sp-pWq">
-                                                    <rect key="frame" x="11" y="8" width="25" height="15"/>
+                                                    <rect key="frame" x="11" y="13" width="25" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hxb-Q7-y3Q">
-                                                    <rect key="frame" x="11" y="43" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="11" y="48" width="0.0" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -500,13 +500,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bJj-cJ-lEw" firstAttribute="top" secondItem="fC6-Qf-xJ2" secondAttribute="bottom" type="default" id="2Gh-e3-vdV"/>
-                            <constraint firstItem="bJj-cJ-lEw" firstAttribute="leading" secondItem="ahd-Kg-6DI" secondAttribute="leading" type="default" id="2qN-wR-uPN"/>
-                            <constraint firstItem="SNz-cX-Ppa" firstAttribute="top" secondItem="bJj-cJ-lEw" secondAttribute="bottom" type="default" id="731-Av-bqP"/>
+                            <constraint firstItem="fC6-Qf-xJ2" firstAttribute="leading" secondItem="ahd-Kg-6DI" secondAttribute="leading" type="default" id="4Qm-dk-d2g"/>
                             <constraint firstItem="bJj-cJ-lEw" firstAttribute="leading" secondItem="fC6-Qf-xJ2" secondAttribute="leading" type="default" id="IB2-nQ-5QU"/>
-                            <constraint firstItem="SNz-cX-Ppa" firstAttribute="trailing" secondItem="bJj-cJ-lEw" secondAttribute="trailing" type="default" id="Ixh-dy-S2a"/>
                             <constraint firstItem="fC6-Qf-xJ2" firstAttribute="top" secondItem="ahd-Kg-6DI" secondAttribute="top" type="default" id="RDq-3h-fsm"/>
-                            <constraint firstAttribute="trailing" secondItem="bJj-cJ-lEw" secondAttribute="trailing" type="default" id="gtT-hk-T8x"/>
+                            <constraint firstItem="SNz-cX-Ppa" firstAttribute="centerX" secondItem="bJj-cJ-lEw" secondAttribute="centerX" type="default" id="TA8-3k-1oY"/>
+                            <constraint firstItem="SNz-cX-Ppa" firstAttribute="top" secondItem="bJj-cJ-lEw" secondAttribute="bottom" type="default" id="gB2-cV-hdW"/>
                             <constraint firstItem="bJj-cJ-lEw" firstAttribute="trailing" secondItem="fC6-Qf-xJ2" secondAttribute="trailing" type="default" id="ynI-lv-Jtb"/>
+                            <constraint firstAttribute="trailing" secondItem="bJj-cJ-lEw" secondAttribute="trailing" type="default" id="zuO-YY-Ipn"/>
                         </constraints>
                     </view>
                 </viewController>
