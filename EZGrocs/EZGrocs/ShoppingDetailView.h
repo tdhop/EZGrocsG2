@@ -13,7 +13,7 @@
 -(void) callBackFromSubView;
 @end
 
-@interface ShoppingDetailView : UIView
+@interface ShoppingDetailView : UIView <UITextFieldDelegate>
 {
     id <ReturnToMainView> delegate;
 }
