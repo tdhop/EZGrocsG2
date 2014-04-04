@@ -121,6 +121,7 @@
 		F0BD85D718A5BFBC00030690 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F0BD85D918A5BFE900030690 /* LabeledSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabeledSpinnerView.h; sourceTree = "<group>"; };
 		F0BD85DC18A5BFE900030690 /* SLShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLShoppingListVC.m; sourceTree = "<group>"; };
+		F0D10FB818EE34170009EEB7 /* ShoppingEntityNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingEntityNames.h; sourceTree = "<group>"; };
 		F0DABE4C18517E940043F2FC /* LabeledSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabeledSpinnerView.m; sourceTree = "<group>"; };
 		F0DABE4D18517E940043F2FC /* SLShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLShoppingListVC.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +159,7 @@
 				F046E9E018C3C803003E2637 /* ShoppingListController.h */,
 				F046E9E118C3C803003E2637 /* ShoppingListController.m */,
 				F046E9E318C3CC1C003E2637 /* StoreInfoDelegate.h */,
+				F0D10FB818EE34170009EEB7 /* ShoppingEntityNames.h */,
 			);
 			name = ShoppingListController;
 			sourceTree = "<group>";

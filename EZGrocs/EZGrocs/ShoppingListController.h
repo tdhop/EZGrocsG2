@@ -27,7 +27,7 @@
     // 2. If item is a ShoppingItem, copy all ProductItem attributes and copy notes but clear quantity, couponFlag, and set owningList to current list.
 - (ShoppingItem *) stageItemForAdd: (ProductItem *) item;
 
-    // Save item to persistent store
+    // Set up relationships with list, save item to persistent store; create new ProductItem if needed
 - (void) commitAddForItem: (ShoppingItem *) stagedItem; // Note that the staged item AND any other unsaved changes will be committed!!!
 
     // Cancel add for item
