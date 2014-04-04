@@ -9,6 +9,7 @@
 #import "ShoppingListController.h"
 #import "StoreInfoDelegate.h"
 #import "ConsumerNotes.h"
+#import "ShoppingEntityNames.h"
 
 @interface ShoppingListController ()
 
@@ -97,9 +98,64 @@
     return  newItem;
 }
 
-    // IMPLEMENT COMMITADDFORITEM
-    // IMPLEMENT CANCELADDFORITEM
-    // IMPLEMENT DELETE ITEM
+    // Set up relationships with list, save item to persistent store; create new ProductItem if needed
+- (void) commitAddForItem: (ShoppingItem *) stagedItem // Note that the staged item AND any other unsaved changes will be committed!!!
+{
+    
+    NSManagedObjectContext *MOC = [self.myStoreInfoDelegate storeInfoMOC];
 
+        // Find out if this is a user-created item - if so, create a new ProductItem and copy attributes
+    if ([stagedItem.userItemFlag boolValue]) {
+            // create new ProductItem and put it in the userDataStore so that it will show up in future registry searches
+        ProductItem *newProductItem = [NSEntityDescription insertNewObjectForEntityForName:PRODUCT_ITEM inManagedObjectContext:MOC];
+            // make sure the item is assigned to the right persistent store
+        [MOC assignObject:newProductItem toPersistentStore:[self.myStoreInfoDelegate userDataStore]];
+            // copy attributes
+        newProductItem.itemName = stagedItem.itemName;
+        newProductItem.sectionID = stagedItem.sectionID;
+        newProductItem.userItemFlag = stagedItem.userItemFlag;
+    }
+    
+        // Now set up the reciprocal relationships between stagedItem and the list I am controlling
+        // First, add stagedItem to the to-many relationship on the list
+    [self.myShoppingItemList addListMembersObject:stagedItem];
+        // Now, add this list to the to-one relationship on stagedItem
+    stagedItem.owningList = self.myShoppingItemList;
+    
+    
+        // Now do a save operation on the MOC which will save the newProductItem, the stagedItem, and anything else that happens to be hanging around in the cache (which should be nothing given our app design)
+    [MOC save:nil]; // Note that there is no error processing here.  If we start seeing problems we may eventually want to process the error in an intelligent manner
+    
+}
+
+
+    // Cancel add for item
+- (void) cancelAddForItem: (ShoppingItem *) stagedItem // Makes sure that ConsumerNotes object is deleted as well - should be taken care of by delete rule
+{
+    
+    NSManagedObjectContext *MOC = [self.myStoreInfoDelegate storeInfoMOC];
+    
+        // Delete ConsumerNotes object
+    [MOC deleteObject:stagedItem.notes];
+        // Delete stagedItem
+    [MOC deleteObject:stagedItem];
+    
+}
+
+
+    // Delete item from persistent store and save (commit)
+- (void) deleteItem: (ShoppingItem *) item
+{
+    
+    NSManagedObjectContext *MOC = [self.myStoreInfoDelegate storeInfoMOC];
+
+        // Delete ConsumerNotes object
+    [MOC deleteObject:item.notes];
+        // Delete stagedItem
+    [MOC deleteObject:item];
+    
+        // now save (commit)
+    [MOC save:nil];
+}
 
 @end
