@@ -35,14 +35,14 @@
 - (ShoppingItem *) createNewItemInMOC: MOC // Convenience method for internal use only - create new item and add to my list
 {
         // Create new item
-    ShoppingItem *newItem = [NSEntityDescription insertNewObjectForEntityForName:@"ShoppingItem" inManagedObjectContext:MOC];
+    ShoppingItem *newItem = [NSEntityDescription insertNewObjectForEntityForName:SHOPPING_ITEM inManagedObjectContext:MOC];
     
         // Assign new item to my list (set both ends of relationship)
     [self.myShoppingItemList addListMembersObject:newItem];
     newItem.owningList = self.myShoppingItemList;
     
         // Create a Consumer Notes instance and assign to new item
-    newItem.notes = [NSEntityDescription insertNewObjectForEntityForName:@"ConsumerNotes" inManagedObjectContext:MOC];
+    newItem.notes = [NSEntityDescription insertNewObjectForEntityForName:CONSUMER_NOTES inManagedObjectContext:MOC];
     
     return newItem;
 }
@@ -73,7 +73,6 @@
     NSManagedObjectContext *MOC = [self.myStoreInfoDelegate storeInfoMOC];
     
         // Create new item
-        // Create new item
     ShoppingItem *newItem = [self createNewItemInMOC:MOC];
     
         // Copy all Product Item attributes
@@ -85,7 +84,7 @@
     if ([item isKindOfClass: [ShoppingItem class]]) {
             // Copy item's notes
         ConsumerNotes *newItemNotes = (ConsumerNotes *) newItem.notes;
-        ConsumerNotes *itemNotes = (ConsumerNotes *) newItemNotes;
+        ConsumerNotes *itemNotes = (ConsumerNotes *)[(ShoppingItem *) item notes];
         newItemNotes.text = itemNotes.text;
         
             // Clear couponFlag
@@ -143,11 +142,15 @@
 }
 
 
-    // Delete item from persistent store and save (commit)
-- (void) deleteItem: (ShoppingItem *) item
+    // Delete item from persistent store and save (commit).  Returns YES if item was on my list, NO otherwise, no action taken if NO
+- (BOOL) deleteItem: (ShoppingItem *) item
 {
     
     NSManagedObjectContext *MOC = [self.myStoreInfoDelegate storeInfoMOC];
+    
+    if (item.owningList != self.myShoppingItemList) {
+        return NO;
+    } else {
 
         // Delete ConsumerNotes object
     [MOC deleteObject:item.notes];
@@ -156,6 +159,9 @@
     
         // now save (commit)
     [MOC save:nil];
+    }
+    
+    return YES;
 }
 
 @end

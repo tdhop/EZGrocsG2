@@ -33,7 +33,7 @@
     // Cancel add for item
 - (void) cancelAddForItem: (ShoppingItem *) stagedItem; // Makes sure that ConsumerNotes object is deleted as well - should be taken care of by delete rule
 
-    // Delete item from persistent store
-- (void) deleteItem: (ShoppingItem *) item;
+    // Delete item from persistent store.    Returns YES if item was on my list, NO otherwise, no action taken if NO
+- (BOOL) deleteItem: (ShoppingItem *) item;
 
 @end
