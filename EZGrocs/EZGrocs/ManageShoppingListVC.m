@@ -7,12 +7,12 @@
 //
 
 #import "ManageShoppingListVC.h"
-#import "ShoppingStoreController.h"
 #import "ProductItem.h"
+#import "ShoppingItemList.h"
+#import "ConsumerNotes.h"
+#import "ShoppingItem.h"
 
 @interface ManageShoppingListVC ()
-
-@property (strong, atomic) ShoppingStoreController *shoppingStoreCtrl;
 
 @end
 
@@ -33,20 +33,10 @@
                     */
     if (self.productTableContext == 0)
     {
-        ShoppingStoreController *shoppingStoreCtrl = [[ShoppingStoreController alloc] init];
-        self.productTableContext=shoppingStoreCtrl.storeInfoMOC;
-        if (self.productTableContext != 0)
-        {
-            self.shouldWaitForProceedMessage=FALSE;
-            [self proceed];
-        }
-        else
-        {
-            // mas self.shouldWaitForProceedMessage=TRUE;
-                    /* Temp hack so unintialized MOC doesn't suspend app*/
-            self.shouldWaitForProceedMessage=FALSE;
-            NSLog(@"Hack in ManageShoppingListVC with mas comment needs to be removed");
-        }
+        self.shoppingStoreCtrl = [[ShoppingStoreController alloc] init];
+        self.productTableContext=self.shoppingStoreCtrl.storeInfoMOC;
+        self.shouldWaitForProceedMessage=FALSE;
+        [self proceed];
     }
     else if (self.shouldWaitForProceedMessage)
     {
@@ -67,11 +57,12 @@
     
                     /* Get shopping list item pointed to by indexpath and configure the cell - item name and notes.
                     */
-    // ProductItem *product = [self.shoppingListResultsController objectAtIndexPath:indexPath];
-    // UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-    // nameLabel.text = [NSString stringWithFormat:@"%@ - %@ - %@", product.itemName, product.sectionName, product.sectionIndex];
+    ShoppingItem *shopItem = [self.shoppingListResultsController objectAtIndexPath:indexPath];
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+    nameLabel.text = shopItem.itemName;
     UILabel *notesLabel = (UILabel *)[cell viewWithTag:2];
-    notesLabel.text = @"3 jars of each";
+    ConsumerNotes *cnote = (ConsumerNotes *) shopItem.notes;
+    notesLabel.text = cnote.text;
     
     return cell;
 }

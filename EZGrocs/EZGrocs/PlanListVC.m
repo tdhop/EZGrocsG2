@@ -9,6 +9,9 @@
 #import "PlanListVC.h"
 #import "AddFromListVC.h"
 
+// temp
+#import "ShoppingListController.h"
+
 @interface PlanListVC ()
 
 @end
@@ -32,6 +35,28 @@
     
     self.shoppingListTable.dataSource = self;
     self.shoppingListTable.delegate =  self;
+    
+                    // Temp
+   /* NSLog (@"MOC=%@",self.shoppingStoreCtrl.storeInfoMOC);
+    id newItem = [NSEntityDescription insertNewObjectForEntityForName:@"ShoppingItemList" inManagedObjectContext:self.shoppingStoreCtrl.storeInfoMOC];
+    
+    ShoppingItemList *sIList = newItem;
+    sIList.listName = @"PlanList";
+    NSLog(@"silist = %@",sIList);
+    ShoppingListController *slController = [[ShoppingListController alloc] initWithList:sIList andStoreInfoDelegate:self.shoppingStoreCtrl];
+    ShoppingItem *shopItem1 = [slController stageNewItemForAdd];
+    shopItem1.itemName=@"PopTarts";
+    shopItem1.sectionID=[NSNumber numberWithInt:3];
+    NSLog(@"shop item = %@",shopItem1);
+    [slController commitAddForItem:shopItem1];
+    ShoppingItem *shopItem2 = [slController stageNewItemForAdd];
+    shopItem2.itemName=@"CornFlakes";
+    shopItem2.sectionID=[NSNumber numberWithInt:3];
+    [slController commitAddForItem:shopItem2];
+    ShoppingItem *shopItem3 = [slController stageNewItemForAdd];
+    shopItem3.itemName=@"Potatoes";
+    shopItem3.sectionID=[NSNumber numberWithInt:2];
+    [slController commitAddForItem:shopItem3]; */
 }
 
                     // Configure count and coupon icon for table row.

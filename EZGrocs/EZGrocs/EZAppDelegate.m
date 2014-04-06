@@ -37,7 +37,7 @@
     BOOL success = [[NSFileManager defaultManager] changeCurrentDirectoryPath:[documentsURL path]];
     NSLog(@"Change to Documents directory was successful? %d", success);
     
-    success = [[NSFileManager defaultManager] createDirectoryAtPath:@"./VikingsDB/StoreContent" withIntermediateDirectories:YES attributes:nil error:nil];
+    success = [[NSFileManager defaultManager] createDirectoryAtPath:@"./DataFiles" withIntermediateDirectories:YES attributes:nil error:nil];
     NSLog(@"Create new directory was successful? %d", success);
     
     /* Copy persistentStore into new directory from bundle. First build URL for file to be copied from bundle then build URL for file destination in Documents then copy file.
@@ -54,7 +54,7 @@
     
         // Allocate UIManagedDoc object pointer to VikingsDB and open file if exists.
     
-    self.productRegistryManagedDoc = [[UIManagedDocument alloc] initWithFileURL:vikingsDestinationURL];
+   /*  self.productRegistryManagedDoc = [[UIManagedDocument alloc] initWithFileURL:vikingsDestinationURL];
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:[vikingsDestinationURL path]])
     {
@@ -74,7 +74,7 @@
     } else
     {
         NSLog(@"VikingsDB was not opened");
-    }
+    } */
     
     return YES;
 }

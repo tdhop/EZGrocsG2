@@ -142,9 +142,9 @@
     [self.shoppingListTable flashScrollIndicators];
     
         // Create Fetch Request
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ProductItem"];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ShoppingItem"];
         // Sort by the itemName attribute
-    NSSortDescriptor *sectionSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"sectionIndex" ascending:YES];
+    NSSortDescriptor *sectionSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"sectionID" ascending:YES];
     NSSortDescriptor *itemSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"itemName" ascending:YES];
         // Add sort descriptor to Fetch Request
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sectionSortDescriptor, itemSortDescriptor, nil];
@@ -158,14 +158,13 @@
     }
     
         // Now create FRC with Fetch Request
-    /* mas self.shoppingListResultsController = [[NSFetchedResultsController alloc]
+   self.shoppingListResultsController = [[NSFetchedResultsController alloc]
                                           initWithFetchRequest:fetchRequest
                                           managedObjectContext:self.productTableContext
-                                          sectionNameKeyPath:@"sectionIndex"
-                                          cacheName:self.cacheName]; */
+                                          sectionNameKeyPath:@"sectionID"
+                                          cacheName:self.cacheName];
     
-    // mas [self.shoppingListResultsController performFetch:nil];
-    NSLog(@"Hacks in SLShoppingListVC with mas comments need to be removed/changed");
+    [self.shoppingListResultsController performFetch:nil];
     
         // Now that everything is ready to go, set data source and tell the tableview to reload
     self.shoppingListTable.dataSource = self;

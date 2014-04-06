@@ -11,8 +11,12 @@
 
 @interface ShoppingStoreController : NSObject <StoreInfoDelegate>
 
-@property (readonly) NSManagedObjectContext *storeInfoMOC;  // Custom getter that will either create/return or will return if it already exists
-@property (readonly) NSPersistentStore *registryStore; // Custom getter that will either create/return or will return if it already exists
-@property (readonly) NSPersistentStore *userDataStore; // Custom getter that will either create/return or will return if it already exists
+                    // Custom getters that will either create/return or will return if it already exists
+@property (readonly) NSManagedObjectContext *storeInfoMOC;
+@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong, nonatomic) NSPersistentStore *registryStore; // Custom getter that will either create/return or will return if it already exists
+@property (strong, nonatomic) NSPersistentStore *userDataStore; // Custom getter that will either create/return or will return if it already exists
 
 @end
