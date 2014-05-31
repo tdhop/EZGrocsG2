@@ -61,8 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		567F3AB618CCEA9A00075662 /* AddFromListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFromListVC.h; path = ../AddFromListVC.h; sourceTree = "<group>"; };
-		567F3AB718CCEA9A00075662 /* AddFromListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFromListVC.m; path = ../AddFromListVC.m; sourceTree = "<group>"; };
+		567F3AB618CCEA9A00075662 /* AddFromListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFromListVC.h; sourceTree = "<group>"; };
+		567F3AB718CCEA9A00075662 /* AddFromListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFromListVC.m; sourceTree = "<group>"; };
 		568CB38B189C89E6006B91F1 /* ManageShoppingListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageShoppingListVC.h; sourceTree = "<group>"; };
 		568CB38C189C89E6006B91F1 /* ManageShoppingListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageShoppingListVC.m; sourceTree = "<group>"; };
 		569C7A9E18CD3BF3003F3A1C /* ShoppingDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingDetailView.h; sourceTree = "<group>"; };

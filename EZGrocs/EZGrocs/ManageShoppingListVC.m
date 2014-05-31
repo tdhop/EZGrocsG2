@@ -11,6 +11,8 @@
 #import "ShoppingItemList.h"
 #import "ConsumerNotes.h"
 #import "ShoppingItem.h"
+#import "StoreSection.h"
+#import "StoreSection+StoreSectionMethods.h"
 
 @interface ManageShoppingListVC ()
 
@@ -63,6 +65,12 @@
     UILabel *notesLabel = (UILabel *)[cell viewWithTag:2];
     ConsumerNotes *cnote = (ConsumerNotes *) shopItem.notes;
     notesLabel.text = cnote.text;
+    
+    NSArray *mysec = [shopItem sectionInfo];
+    StoreSection *mySection = [mysec lastObject];
+    NSLog(@"sect name=%@",mySection.sectionName);
+    NSLog(@"sect id=%@",mySection.sectionID);
+    NSLog(@"sect seq id=%@",mySection.sectionSequenceID);
     
     return cell;
 }

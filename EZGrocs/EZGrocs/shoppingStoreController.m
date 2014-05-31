@@ -42,7 +42,6 @@
         NSArray *tempURLs = [[NSFileManager defaultManager] URLsForDirectory: NSDocumentDirectory inDomains:NSUserDomainMask];
         NSURL *userDataURL = [[tempURLs lastObject] URLByAppendingPathComponent:@"Datafiles/UserData"];
         NSURL *registryURL = [[tempURLs lastObject] URLByAppendingPathComponent:@"Datafiles/Registry"];
-        NSLog(@"URL=%@, %@",userDataURL, registryURL);
     
         NSError *error = nil;
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];

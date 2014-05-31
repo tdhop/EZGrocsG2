@@ -9,6 +9,7 @@
 #import "SLShoppingListVC.h"
 #import "ManageShoppingListVC.h"
 #import "ShoppingDetailView.h"
+#import "ShoppingStoreController.h"
 
 @interface AddFromListVC : SLShoppingListVC
 
@@ -16,5 +17,7 @@
         workingList: (int) listId;
 
 @property (strong,nonatomic) ShoppingDetailView *detailView;
+
+@property (strong, atomic) ShoppingStoreController *shoppingStoreCtrl;
 
 @end

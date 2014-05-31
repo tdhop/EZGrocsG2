@@ -22,6 +22,10 @@
 #import "LabeledSpinnerView.h"
 #import "ProductItem.h"
 #import "StoreSection.h"
+#import "ProductItem+ProductItemMethods.h"
+#import "StoreSection+StoreSectionMethods.h"
+#import "ShoppingItem.h"
+
 
 @interface SLShoppingListVC ()
 
@@ -82,9 +86,16 @@
     return uiSection;
 } */
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 24.0;
+}
+
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{    id <NSFetchedResultsSectionInfo> sectionInfo=[[self.shoppingListResultsController sections] objectAtIndex:section];
-    return (sectionInfo.name);
+{
+    NSArray *storeSections = [StoreSection getStoreSectionsFrom:self.productTableContext];
+    StoreSection *sectionRec = [storeSections objectAtIndex:section];
+    return (sectionRec.sectionName);
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -111,8 +122,6 @@
     }
         // End of critical code segment - Unlock
     [viewWillAppearLock unlock];
-    
-    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -187,6 +196,7 @@
     
     NSInteger count;
     count = [[self.shoppingListResultsController sections] count];
+    NSLog(@"count=%d",count);
     return count; // count;
 }
 

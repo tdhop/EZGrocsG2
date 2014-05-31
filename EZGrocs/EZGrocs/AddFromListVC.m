@@ -26,16 +26,18 @@
     return self;
 }
 
-- (void) initForSegue: (id) upstreamController
-        workingList:(int)listId
+- (void) initForSegue: (id) upstreamController workingList:(int)listId
 {
-                    // Save value of working list (adding to)
-    
+                    // Save value of working list that adding to
     self.workListIdentifier = listId;
 }
 
 - (void)viewDidLoad
 {
+                    // Instantiate a ShoppingStoreCtrl to get MOC
+    self.shoppingStoreCtrl = [[ShoppingStoreController alloc] init];
+    self.productTableContext=self.shoppingStoreCtrl.storeInfoMOC;
+    
     [super viewDidLoad];
 
                     // Default is to retrieve Favorite List.
@@ -43,10 +45,19 @@
     if (self.workListIdentifier == SHOPPING_LIST)
     {
         NSLog(@"AddFromListVC: working list is Shopping List");
+        // Set predicate so will filter retrieval to shopping list only.
+        
+        self.filterDataInList=[NSString stringWithFormat:@"owningList = %d", FAVORITES_LIST];
+        self.shouldWaitForProceedMessage=FALSE;
+        [self proceed];
     }
     else
     {
         NSLog(@"AddFromListVC: working list is Favorites List");
+        
+        self.filterDataInList=[NSString stringWithFormat:@"owningList = %d", SHOPPING_LIST];
+        self.shouldWaitForProceedMessage=FALSE;
+        [self proceed];
     }
 }
     

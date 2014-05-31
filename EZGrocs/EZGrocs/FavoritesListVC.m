@@ -18,7 +18,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -26,6 +27,10 @@
 
 - (void)viewDidLoad
 {
+                        // Set predicate so will filter retrieval to shopping list only.
+    
+    self.filterDataInList=[NSString stringWithFormat:@"owningList = %d", FAVORITES_LIST];
+    
     [super viewDidLoad];
     
                     // Do additional setup after loading view.
